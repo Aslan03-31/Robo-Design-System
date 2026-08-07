@@ -1,0 +1,240 @@
+{
+  "generatedFrom": "Brand Guidelines UPDATE.pdf + Robo/LOGO",
+  "brands": {
+    "robo-coop": {
+      "name": "Robo Co-op",
+      "primary": "#000000",
+      "lockups": {
+        "mark": {
+          "base": "assets/logos/robo-coop/robo-coop-mark.svg",
+          "inverse": "assets/logos/robo-coop/robo-coop-mark-inverse.svg",
+          "inline": "assets/logos/robo-coop/inline/robo-coop-mark-current.svg",
+          "onLight": "assets/logos/robo-coop/robo-coop-mark.svg",
+          "onDark": "assets/logos/robo-coop/robo-coop-mark-inverse.svg",
+          "needsInverse": true,
+          "downloads": [
+            {
+              "id": "black",
+              "label": "Black",
+              "path": "assets/logos/robo-coop/robo-coop-mark.svg",
+              "on": "light"
+            },
+            {
+              "id": "white",
+              "label": "White",
+              "path": "assets/logos/robo-coop/robo-coop-mark-inverse.svg",
+              "on": "dark"
+            }
+          ]
+        },
+        "horizontal": {
+          "base": "assets/logos/robo-coop/robo-coop-horizontal.svg",
+          "inverse": "assets/logos/robo-coop/robo-coop-horizontal-inverse.svg",
+          "boxed": "assets/logos/robo-coop/robo-coop-horizontal-boxed.svg",
+          "inline": "assets/logos/robo-coop/inline/robo-coop-horizontal-current.svg",
+          "onLight": "assets/logos/robo-coop/robo-coop-horizontal.svg",
+          "onDark": "assets/logos/robo-coop/robo-coop-horizontal-inverse.svg",
+          "needsInverse": true,
+          "downloads": [
+            {
+              "id": "black",
+              "label": "Black",
+              "path": "assets/logos/robo-coop/robo-coop-horizontal.svg",
+              "on": "light"
+            },
+            {
+              "id": "white",
+              "label": "White",
+              "path": "assets/logos/robo-coop/robo-coop-horizontal-inverse.svg",
+              "on": "dark"
+            }
+          ]
+        },
+        "vertical": {
+          "base": "assets/logos/robo-coop/robo-coop-vertical.svg",
+          "inverse": "assets/logos/robo-coop/robo-coop-vertical-inverse.svg",
+          "boxed": "assets/logos/robo-coop/robo-coop-vertical-boxed.svg",
+          "inline": "assets/logos/robo-coop/inline/robo-coop-vertical-current.svg",
+          "onLight": "assets/logos/robo-coop/robo-coop-vertical.svg",
+          "onDark": "assets/logos/robo-coop/robo-coop-vertical-inverse.svg",
+          "needsInverse": true,
+          "downloads": [
+            {
+              "id": "black",
+              "label": "Black",
+              "path": "assets/logos/robo-coop/robo-coop-vertical.svg",
+              "on": "light"
+            },
+            {
+              "id": "white",
+              "label": "White",
+              "path": "assets/logos/robo-coop/robo-coop-vertical-inverse.svg",
+              "on": "dark"
+            }
+          ]
+        }
+      }
+    },
+    "robo-lab": {
+      "name": "Robo Lab",
+      "primary": "#007DD1",
+      "lockups": {
+        "mark": {
+          "base": "assets/logos/robo-lab/robo-lab-mark.svg",
+          "boxed": "assets/logos/robo-lab/robo-lab-mark-boxed.svg",
+          "inline": "assets/logos/robo-lab/inline/robo-lab-mark-current.svg",
+          "onLight": "assets/logos/robo-lab/robo-lab-mark.svg",
+          "onDark": "assets/logos/robo-lab/robo-lab-mark.svg",
+          "needsInverse": false,
+          "downloads": [
+            {
+              "id": "colour",
+              "label": "Brand colour",
+              "path": "assets/logos/robo-lab/robo-lab-mark.svg",
+              "on": "light"
+            }
+          ]
+        },
+        "horizontal": {
+          "base": "assets/logos/robo-lab/robo-lab-horizontal.svg",
+          "boxed": "assets/logos/robo-lab/robo-lab-horizontal-boxed.svg",
+          "inline": "assets/logos/robo-lab/inline/robo-lab-horizontal-current.svg",
+          "onLight": "assets/logos/robo-lab/robo-lab-horizontal.svg",
+          "onDark": "assets/logos/robo-lab/robo-lab-horizontal.svg",
+          "needsInverse": false,
+          "downloads": [
+            {
+              "id": "colour",
+              "label": "Brand colour",
+              "path": "assets/logos/robo-lab/robo-lab-horizontal.svg",
+              "on": "light"
+            }
+          ]
+        },
+        "vertical": {
+          "base": "assets/logos/robo-lab/robo-lab-vertical.svg",
+          "boxed": "assets/logos/robo-lab/robo-lab-vertical-boxed.svg",
+          "inline": "assets/logos/robo-lab/inline/robo-lab-vertical-current.svg",
+          "onLight": "assets/logos/robo-lab/robo-lab-vertical.svg",
+          "onDark": "assets/logos/robo-lab/robo-lab-vertical.svg",
+          "needsInverse": false,
+          "downloads": [
+            {
+              "id": "colour",
+              "label": "Brand colour",
+              "path": "assets/logos/robo-lab/robo-lab-vertical.svg",
+              "on": "light"
+            }
+          ]
+        }
+      }
+    },
+    "coop-lab": {
+      "name": "Co-op Lab",
+      "primary": "#FF3F33",
+      "lockups": {
+        "mark": {
+          "base": "assets/logos/coop-lab/coop-lab-mark.svg",
+          "boxed": "assets/logos/coop-lab/coop-lab-mark-boxed.svg",
+          "inline": "assets/logos/coop-lab/inline/coop-lab-mark-current.svg",
+          "onLight": "assets/logos/coop-lab/coop-lab-mark.svg",
+          "onDark": "assets/logos/coop-lab/coop-lab-mark.svg",
+          "needsInverse": false,
+          "downloads": [
+            {
+              "id": "colour",
+              "label": "Brand colour",
+              "path": "assets/logos/coop-lab/coop-lab-mark.svg",
+              "on": "light"
+            }
+          ]
+        },
+        "horizontal": {
+          "base": "assets/logos/coop-lab/coop-lab-horizontal.svg",
+          "boxed": "assets/logos/coop-lab/coop-lab-horizontal-boxed.svg",
+          "inline": "assets/logos/coop-lab/inline/coop-lab-horizontal-current.svg",
+          "onLight": "assets/logos/coop-lab/coop-lab-horizontal.svg",
+          "onDark": "assets/logos/coop-lab/coop-lab-horizontal.svg",
+          "needsInverse": false,
+          "downloads": [
+            {
+              "id": "colour",
+              "label": "Brand colour",
+              "path": "assets/logos/coop-lab/coop-lab-horizontal.svg",
+              "on": "light"
+            }
+          ]
+        },
+        "vertical": {
+          "base": "assets/logos/coop-lab/coop-lab-vertical.svg",
+          "boxed": "assets/logos/coop-lab/coop-lab-vertical-boxed.svg",
+          "inline": "assets/logos/coop-lab/inline/coop-lab-vertical-current.svg",
+          "onLight": "assets/logos/coop-lab/coop-lab-vertical.svg",
+          "onDark": "assets/logos/coop-lab/coop-lab-vertical.svg",
+          "needsInverse": false,
+          "downloads": [
+            {
+              "id": "colour",
+              "label": "Brand colour",
+              "path": "assets/logos/coop-lab/coop-lab-vertical.svg",
+              "on": "light"
+            }
+          ]
+        }
+      }
+    },
+    "robo-university": {
+      "name": "Robo University",
+      "primary": "#6EC207",
+      "lockups": {
+        "mark": {
+          "base": "assets/logos/robo-university/robo-university-mark.svg",
+          "inline": "assets/logos/robo-university/inline/robo-university-mark-current.svg",
+          "onLight": "assets/logos/robo-university/robo-university-mark.svg",
+          "onDark": "assets/logos/robo-university/robo-university-mark.svg",
+          "needsInverse": false,
+          "downloads": [
+            {
+              "id": "colour",
+              "label": "Brand colour",
+              "path": "assets/logos/robo-university/robo-university-mark.svg",
+              "on": "light"
+            }
+          ]
+        },
+        "horizontal": {
+          "base": "assets/logos/robo-university/robo-university-horizontal.svg",
+          "boxed": "assets/logos/robo-university/robo-university-horizontal-boxed.svg",
+          "inline": "assets/logos/robo-university/inline/robo-university-horizontal-current.svg",
+          "onLight": "assets/logos/robo-university/robo-university-horizontal.svg",
+          "onDark": "assets/logos/robo-university/robo-university-horizontal.svg",
+          "needsInverse": false,
+          "downloads": [
+            {
+              "id": "colour",
+              "label": "Brand colour",
+              "path": "assets/logos/robo-university/robo-university-horizontal.svg",
+              "on": "light"
+            }
+          ]
+        },
+        "vertical": {
+          "base": "assets/logos/robo-university/robo-university-vertical.svg",
+          "boxed": "assets/logos/robo-university/robo-university-vertical-boxed.svg",
+          "inline": "assets/logos/robo-university/inline/robo-university-vertical-current.svg",
+          "onLight": "assets/logos/robo-university/robo-university-vertical.svg",
+          "onDark": "assets/logos/robo-university/robo-university-vertical.svg",
+          "needsInverse": false,
+          "downloads": [
+            {
+              "id": "colour",
+              "label": "Brand colour",
+              "path": "assets/logos/robo-university/robo-university-vertical.svg",
+              "on": "light"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

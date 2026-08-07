@@ -1,0 +1,97 @@
+{
+  "$meta": {
+    "slug": "robo-university",
+    "order": 3,
+    "name": "Robo University",
+    "tagline": "Learn Together — Explorative Digital Education",
+    "promise": "The Never-Ending Update.",
+    "descriptor": "Explorative Digital Education",
+    "role": "Explores emerging tools, ideas and ways of learning, and keeps people continuously updating.",
+    "pillars": [
+      "Exploring emerging tools, ideas, and ways of learning",
+      "Developing adaptive skills and digital agency",
+      "Keeping people and communities continuously updating"
+    ],
+    "source": "Brand Guidelines UPDATE.pdf p.09",
+    "onPrimaryPreference": "dark",
+    "$onPrimaryNote": "Fresh lime cannot carry white text — #6EC207 against white is only 2.24:1. Darkening it far enough to pass would destroy the hue, so this brand takes dark text on its primary instead (9.4:1)."
+  },
+
+  "palette": {
+    "primary":      { "value": "#6EC207", "name": "Primary" },
+    "fresh-lime":   { "value": "#ABDC1D", "name": "Fresh Lime" },
+    "robo-green":   { "value": "#4E8E29", "name": "Robo Green" },
+    "sage":         { "value": "#7B9957", "name": "Sage" },
+    "deep-forest":  { "value": "#39411E", "name": "Deep Forest" },
+    "mint-cream":   { "value": "#EFF5E3", "name": "Mint Cream", "note": "Guidelines label reads #39411E, a copy-paste of Deep Forest beside it. The real vector swatch fill is #EFF5E3 and is used here." },
+    "mint":         { "value": "#304528", "name": "Mint", "note": "Named \"Mint\" in the guidelines but is a dark forest tone, not a mint. Name kept for traceability." },
+    "energy-purple":{ "value": "#9354B6", "name": "Energy Purple" },
+    "achieve-gold": { "value": "#F9AB02", "name": "Achieve Gold", "note": "Printed as \"Achive Gold\" in the guidelines — typo." }
+  },
+
+  "theme": {
+    "light": {
+      "surface":         { "mix": ["{palette.mint-cream}", "#FFFFFF", 0.5] },
+      "surface-raised":  "#FFFFFF",
+      "surface-sunken":  "{palette.mint-cream}",
+      "surface-inverse": "{palette.deep-forest}",
+
+      "text":            "{palette.deep-forest}",
+      "text-muted":      { "mix": ["{palette.deep-forest}", "#FFFFFF", 0.28] },
+      "text-subtle":     { "mix": ["{palette.deep-forest}", "#FFFFFF", 0.48] },
+      "text-inverse":    "{palette.mint-cream}",
+
+      "border":          { "mix": ["{palette.deep-forest}", "#FFFFFF", 0.85] },
+      "border-strong":   { "mix": ["{palette.sage}", "#FFFFFF", 0.4] },
+
+      "primary":         "{palette.primary}",
+      "primary-hover":   "{palette.robo-green}",
+      "primary-active":  "{palette.deep-forest}",
+      "primary-subtle":  { "alpha": ["{palette.primary}", 0.12] },
+
+      "accent":          "{palette.energy-purple}",
+      "accent-subtle":   { "alpha": ["{palette.energy-purple}", 0.12] },
+
+      "success":         "{palette.robo-green}",
+      "warning":         "{palette.achieve-gold}",
+      "danger":          "#AD2728",
+      "info":            "{palette.energy-purple}",
+
+      "focus":           "{palette.robo-green}",
+      "overlay":         { "alpha": ["{palette.deep-forest}", 0.55] },
+      "shadow-rgb":      "{palette.deep-forest}"
+    },
+
+    "dark": {
+      "surface":         "#12160C",
+      "surface-raised":  "{palette.mint}",
+      "surface-sunken":  "#0B0E07",
+      "surface-inverse": "{palette.mint-cream}",
+
+      "text":            "{palette.mint-cream}",
+      "text-muted":      { "mix": ["{palette.sage}", "{palette.mint-cream}", 0.5] },
+      "text-subtle":     "{palette.sage}",
+      "text-inverse":    "{palette.deep-forest}",
+
+      "border":          { "mix": ["{palette.sage}", "#12160C", 0.72] },
+      "border-strong":   { "mix": ["{palette.sage}", "#12160C", 0.45] },
+
+      "primary":         "{palette.fresh-lime}",
+      "primary-hover":   { "mix": ["{palette.fresh-lime}", "#FFFFFF", 0.25] },
+      "primary-active":  "{palette.primary}",
+      "primary-subtle":  { "alpha": ["{palette.fresh-lime}", 0.16] },
+
+      "accent":          { "mix": ["{palette.energy-purple}", "#FFFFFF", 0.25] },
+      "accent-subtle":   { "alpha": ["{palette.energy-purple}", 0.22] },
+
+      "success":         "{palette.fresh-lime}",
+      "warning":         "{palette.achieve-gold}",
+      "danger":          "#F87171",
+      "info":            { "mix": ["{palette.energy-purple}", "#FFFFFF", 0.3] },
+
+      "focus":           "{palette.fresh-lime}",
+      "overlay":         { "alpha": ["#000000", 0.7] },
+      "shadow-rgb":      "#000000"
+    }
+  }
+}

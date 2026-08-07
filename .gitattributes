@@ -1,2 +1,24 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Normalise to LF in the repository. Without this, files authored on Windows
+# land as CRLF and every macOS or Linux contributor produces a whole-file diff.
+* text=auto eol=lf
+
+*.css   text eol=lf
+*.js    text eol=lf
+*.mjs   text eol=lf
+*.json  text eol=lf
+*.html  text eol=lf
+*.md    text eol=lf
+*.svg   text eol=lf
+
+*.png   binary
+*.jpg   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.otf   binary
+*.ai    binary
+*.pdf   binary
+
+# Generated output — collapse it in pull request diffs.
+dist/**        linguist-generated=true
+docs/index.html linguist-generated=true

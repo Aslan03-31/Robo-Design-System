@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Typefaces — OPTIONAL, and deliberately not part of the main bundle.
+   ==========================================================================
+
+   robo-design-system.css declares which faces to use but does not load them,
+   because how you load fonts is a hosting decision, not a design-system one.
+   Pick one of these three:
+
+   1. Link this file before the main stylesheet:
+        <link rel="stylesheet" href="dist/css/fonts.css">
+        <link rel="stylesheet" href="dist/css/robo-design-system.css">
+
+   2. Self-host. Preferred for production — no third-party request, no CDN
+      dependency, and it keeps Japanese page-weight under control. Download the
+      families, drop them in assets/fonts/, and replace the @import below with
+      @font-face rules pointing at them.
+
+   3. Load the fonts however your host already does, and skip this file. The
+      token stack falls back to system UI faces, so nothing breaks.
+
+   A note on weight: Noto Sans JP covers thousands of glyphs and the full
+   family is several megabytes. Google Fonts serves it as unicode-range subsets
+   so browsers fetch only what a page actually renders — which is why the
+   @import route is reasonable here despite the size. If you self-host, subset
+   it or you will ship all of it.
+
+   Licences: Roboto and Roboto Mono are Apache-2.0; Noto Sans JP is SIL OFL 1.1.
+   All three are Google LLC. See LICENSE.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');

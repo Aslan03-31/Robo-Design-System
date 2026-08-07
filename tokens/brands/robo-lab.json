@@ -1,0 +1,96 @@
+{
+  "$meta": {
+    "slug": "robo-lab",
+    "order": 2,
+    "name": "Robo Lab",
+    "tagline": "Work Together — Pioneering Systemic Lab",
+    "promise": "Scale Innovation Without Borders.",
+    "descriptor": "Pioneering Systemic Lab",
+    "role": "Turns emerging technologies into real-world systems — and systems into systemic change.",
+    "pillars": [
+      "Exploring and testing emerging technologies",
+      "Prototyping and engineering real-world systems",
+      "Scaling systemic innovation across borders"
+    ],
+    "source": "Brand Guidelines UPDATE.pdf p.08",
+    "onPrimaryPreference": "light"
+  },
+
+  "palette": {
+    "primary":        { "value": "#007DD1", "name": "Primary" },
+    "electric-cyan":  { "value": "#00C3FF", "name": "Electric Cyan", "note": "Guidelines label reads #00C3FF; the vector swatch fill is #00C3EF. Label taken as canonical — it matches shipped Robo Lab web work." },
+    "sky-blue":       { "value": "#65B2F5", "name": "Sky Blue" },
+    "ice-blue":       { "value": "#D0E8FA", "name": "Ice Blue" },
+    "midnight-blue":  { "value": "#20305B", "name": "Midnight Blue" },
+    "deep-navy":      { "value": "#183169", "name": "Deep Navy", "note": "Printed as \"Deeo Navy\" in the guidelines — typo." },
+    "tech-orange":    { "value": "#F75326", "name": "Tech Orange" },
+    "teal":           { "value": "#1EB2A9", "name": "Teal" },
+    "alert-yellow":   { "value": "#FFD166", "name": "Alert Yellow" }
+  },
+
+  "theme": {
+    "light": {
+      "surface":         { "mix": ["{palette.ice-blue}", "#FFFFFF", 0.85] },
+      "surface-raised":  "#FFFFFF",
+      "surface-sunken":  { "mix": ["{palette.ice-blue}", "#FFFFFF", 0.55] },
+      "surface-inverse": "{palette.midnight-blue}",
+
+      "text":            "{palette.midnight-blue}",
+      "text-muted":      { "mix": ["{palette.midnight-blue}", "#FFFFFF", 0.3] },
+      "text-subtle":     { "mix": ["{palette.midnight-blue}", "#FFFFFF", 0.5] },
+      "text-inverse":    "#FFFFFF",
+
+      "border":          { "mix": ["{palette.midnight-blue}", "#FFFFFF", 0.86] },
+      "border-strong":   { "mix": ["{palette.midnight-blue}", "#FFFFFF", 0.6] },
+
+      "primary":         "{palette.primary}",
+      "primary-hover":   "{palette.deep-navy}",
+      "primary-active":  "{palette.midnight-blue}",
+      "primary-subtle":  { "alpha": ["{palette.primary}", 0.08] },
+
+      "accent":          "{palette.electric-cyan}",
+      "accent-subtle":   { "alpha": ["{palette.electric-cyan}", 0.14] },
+
+      "success":         "{palette.teal}",
+      "warning":         "{palette.alert-yellow}",
+      "danger":          "{palette.tech-orange}",
+      "info":            "{palette.primary}",
+
+      "focus":           "{palette.primary}",
+      "overlay":         { "alpha": ["{palette.midnight-blue}", 0.55] },
+      "shadow-rgb":      "{palette.midnight-blue}"
+    },
+
+    "dark": {
+      "surface":         "#0A1226",
+      "surface-raised":  "{palette.deep-navy}",
+      "surface-sunken":  "#060B18",
+      "surface-inverse": "{palette.ice-blue}",
+
+      "text":            "{palette.ice-blue}",
+      "text-muted":      { "mix": ["{palette.sky-blue}", "{palette.ice-blue}", 0.55] },
+      "text-subtle":     "{palette.sky-blue}",
+      "text-inverse":    "{palette.midnight-blue}",
+
+      "border":          { "mix": ["{palette.sky-blue}", "#0A1226", 0.72] },
+      "border-strong":   { "mix": ["{palette.sky-blue}", "#0A1226", 0.45] },
+
+      "primary":         "{palette.electric-cyan}",
+      "primary-hover":   { "mix": ["{palette.electric-cyan}", "#FFFFFF", 0.25] },
+      "primary-active":  "{palette.sky-blue}",
+      "primary-subtle":  { "alpha": ["{palette.electric-cyan}", 0.16] },
+
+      "accent":          "{palette.sky-blue}",
+      "accent-subtle":   { "alpha": ["{palette.sky-blue}", 0.18] },
+
+      "success":         "{palette.teal}",
+      "warning":         "{palette.alert-yellow}",
+      "danger":          { "mix": ["{palette.tech-orange}", "#FFFFFF", 0.2] },
+      "info":            "{palette.electric-cyan}",
+
+      "focus":           "{palette.electric-cyan}",
+      "overlay":         { "alpha": ["#000000", 0.7] },
+      "shadow-rgb":      "#000000"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Utilities — a deliberately small set. If you need a fifth variant of one of
+   these, it probably wants to be a component instead.
+   ========================================================================== */
+
+/* Vertical rhythm. `--gap` overrides the step per instance. */
+.rds-stack { display: flex; flex-direction: column; gap: var(--gap, var(--rds-space-4)); }
+.rds-row   { display: flex; align-items: center; gap: var(--gap, var(--rds-space-4)); flex-wrap: wrap; }
+.rds-row--between { justify-content: space-between; }
+.rds-row--end     { justify-content: flex-end; }
+.rds-row--top     { align-items: flex-start; }
+
+.rds-section { padding-block: var(--rds-space-20); }
+.rds-section--tight { padding-block: var(--rds-space-12); }
+
+/* Text colour roles. */
+.rds-text-muted   { color: var(--rds-color-text-muted); }
+.rds-text-subtle  { color: var(--rds-color-text-subtle); }
+.rds-text-brand   { color: var(--rds-color-primary-text); }
+.rds-text-success { color: var(--rds-color-success-text); }
+.rds-text-warning { color: var(--rds-color-warning-text); }
+.rds-text-danger  { color: var(--rds-color-danger-text); }
+
+/* Surfaces. Setting both colours together keeps contrast guarantees intact —
+   never pair one of these with an unrelated text colour. */
+.rds-surface         { background: var(--rds-color-surface);        color: var(--rds-color-text); }
+.rds-surface-raised  { background: var(--rds-color-surface-raised); color: var(--rds-color-text); }
+.rds-surface-sunken  { background: var(--rds-color-surface-sunken); color: var(--rds-color-text); }
+.rds-surface-inverse { background: var(--rds-color-surface-inverse);color: var(--rds-color-text-inverse); }
+
+/* The gradient wordmark treatment from existing Robo Lab work. */
+.rds-text-gradient {
+  background: linear-gradient(135deg, var(--rds-color-primary), var(--rds-color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.rds-elevation-0 { box-shadow: var(--rds-elevation-0); }
+.rds-elevation-1 { box-shadow: var(--rds-elevation-1); }
+.rds-elevation-2 { box-shadow: var(--rds-elevation-2); }
+.rds-elevation-3 { box-shadow: var(--rds-elevation-3); }
+.rds-elevation-4 { box-shadow: var(--rds-elevation-4); }
+
+.rds-radius-sm   { border-radius: var(--rds-radius-sm); }
+.rds-radius-md   { border-radius: var(--rds-radius-md); }
+.rds-radius-lg   { border-radius: var(--rds-radius-lg); }
+.rds-radius-xl   { border-radius: var(--rds-radius-xl); }
+.rds-radius-pill { border-radius: var(--rds-radius-pill); }

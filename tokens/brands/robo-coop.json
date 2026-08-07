@@ -1,0 +1,98 @@
+{
+  "$meta": {
+    "slug": "robo-coop",
+    "order": 1,
+    "name": "Robo Co-op",
+    "tagline": "Support together — Human⇄Machine Cooperative OS",
+    "promise": "Updating Humanity through Solidarity.",
+    "descriptor": "Human−Machine Cooperative OS",
+    "role": "The shared philosophy, governance and operating foundation that enables people and machines to create value together. It exists to ensure that technological progress expands human agency — not only efficiency.",
+    "pillars": [
+      "Learn what is changing",
+      "Build what should exist",
+      "Share what we create"
+    ],
+    "source": "Brand Guidelines UPDATE.pdf p.07",
+    "onPrimaryPreference": "light"
+  },
+
+  "palette": {
+    "primary":        { "value": "#000000", "name": "Primary" },
+    "robo-black":     { "value": "#0D0F12", "name": "Robo Black" },
+    "circuit-white":  { "value": "#F5F5F0", "name": "Circuit White" },
+    "precision-blue": { "value": "#1E40AF", "name": "Precision Blue" },
+    "sync-cyan":      { "value": "#06B6D4", "name": "Sync Cyan" },
+    "coop-amber":     { "value": "#F59E0B", "name": "Coop Amber" },
+    "steel-gray":     { "value": "#475569", "name": "Steel Gray" },
+    "deep-circuit":   { "value": "#0F172A", "name": "Deep Circuit" },
+    "pulse-green":    { "value": "#10B981", "name": "Pulse Green" }
+  },
+
+  "theme": {
+    "light": {
+      "surface":         "{palette.circuit-white}",
+      "surface-raised":  "#FFFFFF",
+      "surface-sunken":  { "mix": ["{palette.circuit-white}", "{palette.robo-black}", 0.05] },
+      "surface-inverse": "{palette.robo-black}",
+
+      "text":            "{palette.robo-black}",
+      "text-muted":      "{palette.steel-gray}",
+      "text-subtle":     { "mix": ["{palette.steel-gray}", "{palette.circuit-white}", 0.3] },
+      "text-inverse":    "{palette.circuit-white}",
+
+      "border":          { "mix": ["{palette.steel-gray}", "{palette.circuit-white}", 0.78] },
+      "border-strong":   { "mix": ["{palette.steel-gray}", "{palette.circuit-white}", 0.45] },
+
+      "primary":         "{palette.primary}",
+      "primary-hover":   "{palette.precision-blue}",
+      "primary-active":  { "mix": ["{palette.precision-blue}", "{palette.robo-black}", 0.3] },
+      "primary-subtle":  { "alpha": ["{palette.primary}", 0.06] },
+
+      "accent":          "{palette.sync-cyan}",
+      "accent-subtle":   { "alpha": ["{palette.sync-cyan}", 0.12] },
+
+      "success":         "{palette.pulse-green}",
+      "warning":         "{palette.coop-amber}",
+      "danger":          "#AD2728",
+      "info":            "{palette.precision-blue}",
+
+      "focus":           "{palette.precision-blue}",
+      "overlay":         { "alpha": ["{palette.robo-black}", 0.55] },
+      "shadow-rgb":      "{palette.robo-black}"
+    },
+
+    "dark": {
+      "$comment": "Robo Co-op is the only brand whose primary inverts. A #000000 action is invisible on a dark surface, so Circuit White becomes the action colour — mirroring how the logo itself flips.",
+
+      "surface":         "{palette.robo-black}",
+      "surface-raised":  "{palette.deep-circuit}",
+      "surface-sunken":  "#000000",
+      "surface-inverse": "{palette.circuit-white}",
+
+      "text":            "{palette.circuit-white}",
+      "text-muted":      { "mix": ["{palette.steel-gray}", "{palette.circuit-white}", 0.5] },
+      "text-subtle":     { "mix": ["{palette.steel-gray}", "{palette.circuit-white}", 0.28] },
+      "text-inverse":    "{palette.robo-black}",
+
+      "border":          { "mix": ["{palette.steel-gray}", "{palette.robo-black}", 0.55] },
+      "border-strong":   "{palette.steel-gray}",
+
+      "primary":         "{palette.circuit-white}",
+      "primary-hover":   "#FFFFFF",
+      "primary-active":  { "mix": ["{palette.circuit-white}", "{palette.steel-gray}", 0.25] },
+      "primary-subtle":  { "alpha": ["{palette.circuit-white}", 0.1] },
+
+      "accent":          "{palette.sync-cyan}",
+      "accent-subtle":   { "alpha": ["{palette.sync-cyan}", 0.18] },
+
+      "success":         "{palette.pulse-green}",
+      "warning":         "{palette.coop-amber}",
+      "danger":          "#F87171",
+      "info":            { "mix": ["{palette.precision-blue}", "{palette.circuit-white}", 0.35] },
+
+      "focus":           "{palette.sync-cyan}",
+      "overlay":         { "alpha": ["#000000", 0.7] },
+      "shadow-rgb":      "#000000"
+    }
+  }
+}

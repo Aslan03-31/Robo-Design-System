@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Badge — the pill label used across Robo Co-op web work.
+   Text uses the `-text` token siblings so it stays legible on the tint.
+   ========================================================================== */
+
+.rds-badge {
+  --_bg: var(--rds-color-primary-subtle);
+  --_fg: var(--rds-color-primary-text);
+  --_border: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--rds-space-2);
+
+  padding: var(--rds-space-2) var(--rds-space-4);
+
+  font-size: var(--rds-text-caption);
+  font-weight: var(--rds-weight-medium);
+  line-height: 1.2;
+  letter-spacing: var(--rds-tracking-wide);
+
+  color: var(--_fg);
+  background-color: var(--_bg);
+  border: var(--rds-border-hairline) solid var(--_border);
+  border-radius: var(--rds-radius-pill);
+}
+
+/* The uppercase eyebrow treatment from the existing site. */
+.rds-badge--eyebrow {
+  text-transform: uppercase;
+  letter-spacing: var(--rds-tracking-widest);
+  border-color: var(--rds-color-primary-subtle);
+}
+
+.rds-badge--accent  { --_bg: var(--rds-color-accent-subtle);  --_fg: var(--rds-color-accent-text); }
+.rds-badge--success { --_bg: var(--rds-color-primary-subtle); --_fg: var(--rds-color-success-text); }
+.rds-badge--warning { --_bg: var(--rds-color-primary-subtle); --_fg: var(--rds-color-warning-text); }
+.rds-badge--danger  { --_bg: var(--rds-color-primary-subtle); --_fg: var(--rds-color-danger-text); }
+.rds-badge--info    { --_bg: var(--rds-color-primary-subtle); --_fg: var(--rds-color-info-text); }
+
+/* Solid treatment, for when the badge is the loudest thing on the row. */
+.rds-badge--solid {
+  --_bg: var(--rds-color-primary-strong);
+  --_fg: var(--rds-color-on-primary);
+}
+
+.rds-badge--outline {
+  --_bg: transparent;
+  --_border: var(--rds-color-border-strong);
+  --_fg: var(--rds-color-text-muted);
+}
+
+/* A small coloured dot, for status rows. Pair with text — never rely on
+   colour alone to carry meaning (WCAG 1.4.1). */
+.rds-badge__dot {
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: var(--rds-radius-pill);
+  background: currentColor;
+  flex-shrink: 0;
+}

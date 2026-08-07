@@ -1,0 +1,13 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+.env
+.env.*
+.vscode/
+.idea/
+
+# dist/ and docs/ ARE committed on purpose: this repo is consumed directly from
+# GitHub by projects that do not run a build step, so the compiled CSS and the
+# documentation site need to be present in the tree.

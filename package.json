@@ -1,0 +1,38 @@
+{
+  "name": "@robo-coop/design-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Design tokens, logo assets and a framework-free CSS layer for Robo Co-op, Robo Lab, Co-op Lab and Robo University.",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": "./dist/tokens.js",
+    "./tokens.json": "./dist/tokens.json",
+    "./css": "./dist/css/robo-design-system.css",
+    "./css/tokens": "./dist/css/tokens.css",
+    "./css/fonts": "./dist/css/fonts.css",
+    "./assets/*": "./assets/*"
+  },
+  "files": [
+    "dist",
+    "assets",
+    "tokens",
+    "src"
+  ],
+  "scripts": {
+    "assets": "node scripts/prepare-assets.mjs",
+    "tokens": "node scripts/build-tokens.mjs",
+    "bundle": "node scripts/bundle-css.mjs",
+    "build": "npm run tokens && npm run bundle",
+    "check:contrast": "node scripts/check-contrast.mjs",
+    "test": "npm run build && npm run check:contrast",
+    "docs": "node scripts/build-docs.mjs",
+    "start": "npm run build && npm run docs && node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

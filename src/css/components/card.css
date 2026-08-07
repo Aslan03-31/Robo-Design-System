@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Card
+   ========================================================================== */
+
+.rds-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rds-space-3);
+
+  padding: var(--rds-space-6);
+
+  background-color: var(--rds-color-surface-raised);
+  border: var(--rds-border-hairline) solid var(--rds-color-border);
+  border-radius: var(--rds-radius-lg);
+  box-shadow: var(--rds-elevation-1);
+
+  transition: box-shadow  var(--rds-duration-base) var(--rds-ease-standard),
+              transform   var(--rds-duration-base) var(--rds-ease-standard),
+              border-color var(--rds-duration-base) var(--rds-ease-standard);
+}
+
+/* Only for cards that are genuinely a single link or button target. */
+.rds-card--interactive { cursor: pointer; }
+
+.rds-card--interactive:hover,
+.rds-card--interactive:focus-within {
+  transform: translateY(-2px);
+  box-shadow: var(--rds-elevation-3);
+  border-color: var(--rds-color-primary);
+}
+
+.rds-card--flat { box-shadow: none; }
+
+.rds-card--sunken {
+  background-color: var(--rds-color-surface-sunken);
+  box-shadow: none;
+}
+
+.rds-card--inverse {
+  background-color: var(--rds-color-surface-inverse);
+  color: var(--rds-color-text-inverse);
+  border-color: transparent;
+}
+
+/* A card that leads with its brand colour. */
+.rds-card--accented {
+  border-top: var(--rds-border-heavy) solid var(--rds-color-primary);
+}
+
+.rds-card__title {
+  font-size: var(--rds-text-h3);
+  font-weight: var(--rds-weight-medium);
+  line-height: var(--rds-leading-snug);
+}
+
+.rds-card__body {
+  color: var(--rds-color-text-muted);
+  font-size: var(--rds-text-body-sm);
+}
+
+.rds-card__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--rds-space-3);
+  margin-top: auto;
+  padding-top: var(--rds-space-4);
+  border-top: var(--rds-border-hairline) solid var(--rds-color-border);
+}
+
+/* --------------------------------------------------------------- grid ---- */
+
+.rds-card-grid {
+  display: grid;
+  gap: var(--rds-space-6);
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+}

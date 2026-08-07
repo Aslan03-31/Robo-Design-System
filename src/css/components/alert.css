@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Alert — inline status messaging.
+   Every variant carries an icon slot as well as colour, because colour alone
+   is not an accessible signal (WCAG 1.4.1).
+   ========================================================================== */
+
+.rds-alert {
+  --_fg: var(--rds-color-info-text);
+
+  display: flex;
+  align-items: flex-start;
+  gap: var(--rds-space-3);
+
+  padding: var(--rds-space-4) var(--rds-space-5);
+
+  background-color: var(--rds-color-surface-raised);
+  border: var(--rds-border-hairline) solid var(--rds-color-border);
+  border-left: var(--rds-border-heavy) solid var(--_fg);
+  border-radius: var(--rds-radius-md);
+
+  font-size: var(--rds-text-body-sm);
+  color: var(--rds-color-text);
+}
+
+.rds-alert--success { --_fg: var(--rds-color-success-text); }
+.rds-alert--warning { --_fg: var(--rds-color-warning-text); }
+.rds-alert--danger  { --_fg: var(--rds-color-danger-text); }
+.rds-alert--info    { --_fg: var(--rds-color-info-text); }
+
+.rds-alert__icon {
+  flex-shrink: 0;
+  width: 1.25em;
+  height: 1.25em;
+  margin-top: 0.1em;
+  color: var(--_fg);
+}
+
+.rds-alert__content { display: flex; flex-direction: column; gap: var(--rds-space-1); }
+
+.rds-alert__title {
+  font-weight: var(--rds-weight-medium);
+  color: var(--_fg);
+}
+
+.rds-alert__body { color: var(--rds-color-text-muted); }

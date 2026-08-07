@@ -1,0 +1,663 @@
+/*
+ * Robo Co-op Design System — design tokens
+ * GENERATED FILE. Edit tokens/*.json and run `npm run build`.
+ *
+ * Usage:  <html data-brand="robo-lab">            follows the OS theme
+ *         <html data-brand="robo-lab" data-theme="dark">   forced
+ */
+
+:root {
+  /* Typography */
+  --rds-font-latin: 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --rds-font-japanese: 'Noto Sans JP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
+  --rds-font-mono: 'Roboto Mono', ui-monospace, 'Cascadia Code', monospace;
+  --rds-weight-light: 300;
+  --rds-weight-regular: 400;
+  --rds-weight-medium: 500;
+  --rds-weight-bold: 700;
+  --rds-text-title: 80px;  /* 60pt */
+  --rds-text-heading: 43px;  /* 32pt */
+  --rds-text-subtitle: 32px;  /* 24pt */
+  --rds-text-section-header: 21px;  /* 16pt */
+  --rds-text-subheading: 16px;  /* 12pt */
+  --rds-text-body: 16px;  /* 12pt */
+  --rds-text-quote: 20px;  /* 15pt */
+  --rds-text-caption: 12px;  /* 9pt */
+  --rds-text-body-lg: 18px;
+  --rds-text-body-sm: 14px;
+  --rds-text-caption-sm: 10px;
+  --rds-text-title-weight: var(--rds-weight-light);
+  --rds-text-heading-weight: var(--rds-weight-bold);
+  --rds-text-subtitle-weight: var(--rds-weight-regular);
+  --rds-text-section-header-weight: var(--rds-weight-bold);
+  --rds-text-subheading-weight: var(--rds-weight-bold);
+  --rds-text-body-weight: var(--rds-weight-regular);
+  --rds-text-quote-weight: var(--rds-weight-regular);
+  --rds-text-caption-weight: var(--rds-weight-light);
+  --rds-text-body-lg-weight: var(--rds-weight-regular);
+  --rds-text-body-sm-weight: var(--rds-weight-regular);
+  --rds-text-caption-sm-weight: var(--rds-weight-light);
+
+  /* Aliases — these point at the named roles, they are not new sizes. */
+  --rds-text-display: var(--rds-text-title);
+  --rds-text-display-weight: var(--rds-weight-light);
+  --rds-text-h1: var(--rds-text-heading);
+  --rds-text-h1-weight: var(--rds-weight-bold);
+  --rds-text-h2: var(--rds-text-subtitle);
+  --rds-text-h2-weight: var(--rds-weight-regular);
+  --rds-text-h3: var(--rds-text-section-header);
+  --rds-text-h3-weight: var(--rds-weight-bold);
+  --rds-text-h4: var(--rds-text-subheading);
+  --rds-text-h4-weight: var(--rds-weight-bold);
+  --rds-leading-tight: 1.15;
+  --rds-leading-snug: 1.3;
+  --rds-leading-normal: 1.6;
+  --rds-leading-relaxed: 1.75;
+  --rds-leading-ja: 1.8;
+  --rds-leading-ja-tight: 1.4;
+  --rds-tracking-tighter: -0.02em;
+  --rds-tracking-tight: -0.01em;
+  --rds-tracking-normal: 0em;
+  --rds-tracking-wide: 0.02em;
+  --rds-tracking-widest: 0.12em;
+
+  /* Space */
+  --rds-space-0: 0;
+  --rds-space-1: 4px;
+  --rds-space-2: 8px;
+  --rds-space-3: 12px;
+  --rds-space-4: 16px;
+  --rds-space-5: 20px;
+  --rds-space-6: 24px;
+  --rds-space-8: 32px;
+  --rds-space-10: 40px;
+  --rds-space-12: 48px;
+  --rds-space-16: 64px;
+  --rds-space-20: 80px;
+  --rds-space-24: 96px;
+  --rds-space-32: 128px;
+
+  /* Radius */
+  --rds-radius-none: 0;
+  --rds-radius-sm: 4px;
+  --rds-radius-md: 8px;
+  --rds-radius-lg: 16px;
+  --rds-radius-xl: 24px;
+  --rds-radius-pill: 999px;
+
+  /* Border */
+  --rds-border-hairline: 1px;
+  --rds-border-thick: 2px;
+  --rds-border-heavy: 4px;
+
+  /* Motion */
+  --rds-duration-instant: 0ms;
+  --rds-duration-fast: 120ms;
+  --rds-duration-base: 240ms;
+  --rds-duration-slow: 400ms;
+  --rds-duration-glacial: 700ms;
+  --rds-ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+  --rds-ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
+  --rds-ease-decelerate: cubic-bezier(0, 0, 0.2, 1);
+  --rds-ease-linear: linear;
+
+  /* Elevation */
+  --rds-elevation-0: none;
+  --rds-elevation-1: 0 1px 2px rgba(var(--rds-shadow-rgb) / 0.06), 0 1px 3px rgba(var(--rds-shadow-rgb) / 0.10);
+  --rds-elevation-2: 0 4px 6px rgba(var(--rds-shadow-rgb) / 0.05), 0 2px 4px rgba(var(--rds-shadow-rgb) / 0.06);
+  --rds-elevation-3: 0 10px 30px rgba(var(--rds-shadow-rgb) / 0.10);
+  --rds-elevation-4: 0 20px 40px rgba(var(--rds-shadow-rgb) / 0.15);
+
+  /* Layout */
+  --rds-container-narrow: 720px;
+  --rds-container-base: 1024px;
+  --rds-container-wide: 1300px;
+  --rds-focus-width: 3px;
+  --rds-focus-offset: 2px;
+}
+
+/* Raw brand palettes — always available, never theme-dependent. */
+[data-brand="robo-coop"] {
+  --rds-palette-primary: #000000;
+  --rds-palette-robo-black: #0D0F12;
+  --rds-palette-circuit-white: #F5F5F0;
+  --rds-palette-precision-blue: #1E40AF;
+  --rds-palette-sync-cyan: #06B6D4;
+  --rds-palette-coop-amber: #F59E0B;
+  --rds-palette-steel-gray: #475569;
+  --rds-palette-deep-circuit: #0F172A;
+  --rds-palette-pulse-green: #10B981;
+}
+[data-brand="robo-lab"] {
+  --rds-palette-primary: #007DD1;
+  --rds-palette-electric-cyan: #00C3FF;
+  --rds-palette-sky-blue: #65B2F5;
+  --rds-palette-ice-blue: #D0E8FA;
+  --rds-palette-midnight-blue: #20305B;
+  --rds-palette-deep-navy: #183169;
+  --rds-palette-tech-orange: #F75326;
+  --rds-palette-teal: #1EB2A9;
+  --rds-palette-alert-yellow: #FFD166;
+}
+[data-brand="robo-university"] {
+  --rds-palette-primary: #6EC207;
+  --rds-palette-fresh-lime: #ABDC1D;
+  --rds-palette-robo-green: #4E8E29;
+  --rds-palette-sage: #7B9957;
+  --rds-palette-deep-forest: #39411E;
+  --rds-palette-mint-cream: #EFF5E3;
+  --rds-palette-mint: #304528;
+  --rds-palette-energy-purple: #9354B6;
+  --rds-palette-achieve-gold: #F9AB02;
+}
+[data-brand="coop-lab"] {
+  --rds-palette-primary: #FF3F33;
+  --rds-palette-coral: #FD675B;
+  --rds-palette-salmon: #FD847B;
+  --rds-palette-blush: #FCEEEF;
+  --rds-palette-crimson: #AD2728;
+  --rds-palette-burgundy: #812627;
+  --rds-palette-creative: #985CCF;
+  --rds-palette-cyan: #4DA7F9;
+  --rds-palette-growth-green: #10B981;
+}
+
+/* Light is the default; dark follows the OS unless data-theme overrides it. */
+[data-brand="robo-coop"] {
+  --rds-color-surface: #F5F5F0;
+  --rds-color-surface-raised: #FFFFFF;
+  --rds-color-surface-sunken: #E9EAE5;
+  --rds-color-surface-inverse: #0D0F12;
+  --rds-color-text: #0D0F12;
+  --rds-color-text-muted: #475569;
+  --rds-color-text-subtle: #7B8592;
+  --rds-color-text-inverse: #F5F5F0;
+  --rds-color-border: #CFD2D2;
+  --rds-color-border-strong: #868D95;
+  --rds-color-primary: #000000;
+  --rds-color-primary-hover: #1E40AF;
+  --rds-color-primary-active: #193180;
+  --rds-color-primary-subtle: rgba(0, 0, 0, 0.06);
+  --rds-color-accent: #06B6D4;
+  --rds-color-accent-subtle: rgba(6, 182, 212, 0.12);
+  --rds-color-success: #10B981;
+  --rds-color-warning: #F59E0B;
+  --rds-color-danger: #AD2728;
+  --rds-color-info: #1E40AF;
+  --rds-color-focus: #1E40AF;
+  --rds-color-overlay: rgba(13, 15, 18, 0.55);
+  --rds-color-shadow-rgb: 13 15 18;
+  --rds-color-primary-text: #000000;
+  --rds-color-accent-text: #047386;
+  --rds-color-success-text: #0A7854;
+  --rds-color-warning-text: #915D06;
+  --rds-color-danger-text: #AD2728;
+  --rds-color-info-text: #1E40AF;
+  --rds-color-on-primary: #FFFFFF;
+  --rds-color-primary-strong: #000000;
+}
+[data-brand="robo-lab"] {
+  --rds-color-surface: #F8FCFE;
+  --rds-color-surface-raised: #FFFFFF;
+  --rds-color-surface-sunken: #EAF5FD;
+  --rds-color-surface-inverse: #20305B;
+  --rds-color-text: #20305B;
+  --rds-color-text-muted: #636E8C;
+  --rds-color-text-subtle: #8A92A6;
+  --rds-color-text-inverse: #FFFFFF;
+  --rds-color-border: #E0E2E8;
+  --rds-color-border-strong: #8D92A1;
+  --rds-color-primary: #007DD1;
+  --rds-color-primary-hover: #183169;
+  --rds-color-primary-active: #20305B;
+  --rds-color-primary-subtle: rgba(0, 125, 209, 0.08);
+  --rds-color-accent: #00C3FF;
+  --rds-color-accent-subtle: rgba(0, 195, 255, 0.14);
+  --rds-color-success: #1EB2A9;
+  --rds-color-warning: #FFD166;
+  --rds-color-danger: #F75326;
+  --rds-color-info: #007DD1;
+  --rds-color-focus: #007DD1;
+  --rds-color-overlay: rgba(32, 48, 91, 0.55);
+  --rds-color-shadow-rgb: 32 48 91;
+  --rds-color-primary-text: #006FBA;
+  --rds-color-accent-text: #007599;
+  --rds-color-success-text: #157B75;
+  --rds-color-warning-text: #826B34;
+  --rds-color-danger-text: #C6421E;
+  --rds-color-info-text: #0073C0;
+  --rds-color-on-primary: #FFFFFF;
+  --rds-color-primary-strong: #0079CB;
+}
+[data-brand="robo-university"] {
+  --rds-color-surface: #F7FAF1;
+  --rds-color-surface-raised: #FFFFFF;
+  --rds-color-surface-sunken: #EFF5E3;
+  --rds-color-surface-inverse: #39411E;
+  --rds-color-text: #39411E;
+  --rds-color-text-muted: #6F755C;
+  --rds-color-text-subtle: #8D9180;
+  --rds-color-text-inverse: #EFF5E3;
+  --rds-color-border: #E1E3DD;
+  --rds-color-border-strong: #889577;
+  --rds-color-primary: #6EC207;
+  --rds-color-primary-hover: #4E8E29;
+  --rds-color-primary-active: #39411E;
+  --rds-color-primary-subtle: rgba(110, 194, 7, 0.12);
+  --rds-color-accent: #9354B6;
+  --rds-color-accent-subtle: rgba(147, 84, 182, 0.12);
+  --rds-color-success: #4E8E29;
+  --rds-color-warning: #F9AB02;
+  --rds-color-danger: #AD2728;
+  --rds-color-info: #9354B6;
+  --rds-color-focus: #4E8E29;
+  --rds-color-overlay: rgba(57, 65, 30, 0.55);
+  --rds-color-shadow-rgb: 57 65 30;
+  --rds-color-primary-text: #457A04;
+  --rds-color-accent-text: #894EA9;
+  --rds-color-success-text: #447C24;
+  --rds-color-warning-text: #936501;
+  --rds-color-danger-text: #AD2728;
+  --rds-color-info-text: #9354B6;
+  --rds-color-on-primary: #0D0F12;
+  --rds-color-primary-strong: #6EC207;
+}
+[data-brand="coop-lab"] {
+  --rds-color-surface: #FEF8F9;
+  --rds-color-surface-raised: #FFFFFF;
+  --rds-color-surface-sunken: #FCEEEF;
+  --rds-color-surface-inverse: #812627;
+  --rds-color-text: #1A1416;
+  --rds-color-text-muted: #9F6263;
+  --rds-color-text-subtle: #AE8686;
+  --rds-color-text-inverse: #FFFFFF;
+  --rds-color-border: #F3DFDF;
+  --rds-color-border-strong: #B58383;
+  --rds-color-primary: #FF3F33;
+  --rds-color-primary-hover: #AD2728;
+  --rds-color-primary-active: #812627;
+  --rds-color-primary-subtle: rgba(255, 63, 51, 0.08);
+  --rds-color-accent: #985CCF;
+  --rds-color-accent-subtle: rgba(152, 92, 207, 0.12);
+  --rds-color-success: #10B981;
+  --rds-color-warning: #F59E0B;
+  --rds-color-danger: #AD2728;
+  --rds-color-info: #4DA7F9;
+  --rds-color-focus: #AD2728;
+  --rds-color-overlay: rgba(129, 38, 39, 0.55);
+  --rds-color-shadow-rgb: 129 38 39;
+  --rds-color-primary-text: #C93228;
+  --rds-color-accent-text: #8450B4;
+  --rds-color-success-text: #0B7C56;
+  --rds-color-warning-text: #986207;
+  --rds-color-danger-text: #AD2728;
+  --rds-color-info-text: #3472A9;
+  --rds-color-on-primary: #FFFFFF;
+  --rds-color-primary-strong: #DB362C;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"])[data-brand="robo-coop"],
+  :root:not([data-theme="light"]) [data-brand="robo-coop"] {
+    --rds-color-surface: #0D0F12;
+    --rds-color-surface-raised: #0F172A;
+    --rds-color-surface-sunken: #000000;
+    --rds-color-surface-inverse: #F5F5F0;
+    --rds-color-text: #F5F5F0;
+    --rds-color-text-muted: #9EA5AD;
+    --rds-color-text-subtle: #78828F;
+    --rds-color-text-inverse: #0D0F12;
+    --rds-color-border: #272F39;
+    --rds-color-border-strong: #546174;
+    --rds-color-primary: #F5F5F0;
+    --rds-color-primary-hover: #FFFFFF;
+    --rds-color-primary-active: #CACDCE;
+    --rds-color-primary-subtle: rgba(245, 245, 240, 0.1);
+    --rds-color-accent: #06B6D4;
+    --rds-color-accent-subtle: rgba(6, 182, 212, 0.18);
+    --rds-color-success: #10B981;
+    --rds-color-warning: #F59E0B;
+    --rds-color-danger: #F87171;
+    --rds-color-info: #697FC6;
+    --rds-color-focus: #06B6D4;
+    --rds-color-overlay: rgba(0, 0, 0, 0.7);
+    --rds-color-shadow-rgb: 0 0 0;
+    --rds-color-primary-text: #F5F5F0;
+    --rds-color-accent-text: #06B6D4;
+    --rds-color-success-text: #10B981;
+    --rds-color-warning-text: #F59E0B;
+    --rds-color-danger-text: #F87171;
+    --rds-color-info-text: #697FC6;
+    --rds-color-on-primary: #0D0F12;
+    --rds-color-primary-strong: #F5F5F0;
+  }
+  :root:not([data-theme="light"])[data-brand="robo-lab"],
+  :root:not([data-theme="light"]) [data-brand="robo-lab"] {
+    --rds-color-surface: #0A1226;
+    --rds-color-surface-raised: #183169;
+    --rds-color-surface-sunken: #060B18;
+    --rds-color-surface-inverse: #D0E8FA;
+    --rds-color-text: #D0E8FA;
+    --rds-color-text-muted: #A0D0F8;
+    --rds-color-text-subtle: #65B2F5;
+    --rds-color-text-inverse: #20305B;
+    --rds-color-border: #233F60;
+    --rds-color-border-strong: #3C6A98;
+    --rds-color-primary: #00C3FF;
+    --rds-color-primary-hover: #40D2FF;
+    --rds-color-primary-active: #65B2F5;
+    --rds-color-primary-subtle: rgba(0, 195, 255, 0.16);
+    --rds-color-accent: #65B2F5;
+    --rds-color-accent-subtle: rgba(101, 178, 245, 0.18);
+    --rds-color-success: #1EB2A9;
+    --rds-color-warning: #FFD166;
+    --rds-color-danger: #F97551;
+    --rds-color-info: #00C3FF;
+    --rds-color-focus: #00C3FF;
+    --rds-color-overlay: rgba(0, 0, 0, 0.7);
+    --rds-color-shadow-rgb: 0 0 0;
+    --rds-color-primary-text: #00C3FF;
+    --rds-color-accent-text: #65B2F5;
+    --rds-color-success-text: #1EB2A9;
+    --rds-color-warning-text: #FFD166;
+    --rds-color-danger-text: #F97551;
+    --rds-color-info-text: #00C3FF;
+    --rds-color-on-primary: #0D0F12;
+    --rds-color-primary-strong: #00C3FF;
+  }
+  :root:not([data-theme="light"])[data-brand="robo-university"],
+  :root:not([data-theme="light"]) [data-brand="robo-university"] {
+    --rds-color-surface: #12160C;
+    --rds-color-surface-raised: #304528;
+    --rds-color-surface-sunken: #0B0E07;
+    --rds-color-surface-inverse: #EFF5E3;
+    --rds-color-text: #EFF5E3;
+    --rds-color-text-muted: #B5C79D;
+    --rds-color-text-subtle: #7B9957;
+    --rds-color-text-inverse: #39411E;
+    --rds-color-border: #2F3B21;
+    --rds-color-border-strong: #576841;
+    --rds-color-primary: #ABDC1D;
+    --rds-color-primary-hover: #C0E556;
+    --rds-color-primary-active: #6EC207;
+    --rds-color-primary-subtle: rgba(171, 220, 29, 0.16);
+    --rds-color-accent: #AE7FC8;
+    --rds-color-accent-subtle: rgba(147, 84, 182, 0.22);
+    --rds-color-success: #ABDC1D;
+    --rds-color-warning: #F9AB02;
+    --rds-color-danger: #F87171;
+    --rds-color-info: #B387CC;
+    --rds-color-focus: #ABDC1D;
+    --rds-color-overlay: rgba(0, 0, 0, 0.7);
+    --rds-color-shadow-rgb: 0 0 0;
+    --rds-color-primary-text: #ABDC1D;
+    --rds-color-accent-text: #C19ED5;
+    --rds-color-success-text: #ABDC1D;
+    --rds-color-warning-text: #F9AB02;
+    --rds-color-danger-text: #F98B8B;
+    --rds-color-info-text: #C19DD5;
+    --rds-color-on-primary: #0D0F12;
+    --rds-color-primary-strong: #ABDC1D;
+  }
+  :root:not([data-theme="light"])[data-brand="coop-lab"],
+  :root:not([data-theme="light"]) [data-brand="coop-lab"] {
+    --rds-color-surface: #1A1012;
+    --rds-color-surface-raised: #26171A;
+    --rds-color-surface-sunken: #120A0C;
+    --rds-color-surface-inverse: #FCEEEF;
+    --rds-color-text: #FCEEEF;
+    --rds-color-text-muted: #FDB9B5;
+    --rds-color-text-subtle: #FD847B;
+    --rds-color-text-inverse: #1A1416;
+    --rds-color-border: #532D2C;
+    --rds-color-border-strong: #8F4F4D;
+    --rds-color-primary: #FD675B;
+    --rds-color-primary-hover: #FD847B;
+    --rds-color-primary-active: #FF3F33;
+    --rds-color-primary-subtle: rgba(253, 103, 91, 0.16);
+    --rds-color-accent: #AF80DA;
+    --rds-color-accent-subtle: rgba(152, 92, 207, 0.22);
+    --rds-color-success: #10B981;
+    --rds-color-warning: #FBBF24;
+    --rds-color-danger: #FD847B;
+    --rds-color-info: #4DA7F9;
+    --rds-color-focus: #FD847B;
+    --rds-color-overlay: rgba(0, 0, 0, 0.7);
+    --rds-color-shadow-rgb: 0 0 0;
+    --rds-color-primary-text: #FD675B;
+    --rds-color-accent-text: #AF80DA;
+    --rds-color-success-text: #10B981;
+    --rds-color-warning-text: #FBBF24;
+    --rds-color-danger-text: #FD847B;
+    --rds-color-info-text: #4DA7F9;
+    --rds-color-on-primary: #0D0F12;
+    --rds-color-primary-strong: #FD675B;
+  }
+}
+
+/* Same (0,3,0) specificity as the media rule above, so source order wins. */
+:root[data-theme="dark"][data-brand="robo-coop"],
+:root[data-theme="dark"] [data-brand="robo-coop"] {
+  --rds-color-surface: #0D0F12;
+  --rds-color-surface-raised: #0F172A;
+  --rds-color-surface-sunken: #000000;
+  --rds-color-surface-inverse: #F5F5F0;
+  --rds-color-text: #F5F5F0;
+  --rds-color-text-muted: #9EA5AD;
+  --rds-color-text-subtle: #78828F;
+  --rds-color-text-inverse: #0D0F12;
+  --rds-color-border: #272F39;
+  --rds-color-border-strong: #546174;
+  --rds-color-primary: #F5F5F0;
+  --rds-color-primary-hover: #FFFFFF;
+  --rds-color-primary-active: #CACDCE;
+  --rds-color-primary-subtle: rgba(245, 245, 240, 0.1);
+  --rds-color-accent: #06B6D4;
+  --rds-color-accent-subtle: rgba(6, 182, 212, 0.18);
+  --rds-color-success: #10B981;
+  --rds-color-warning: #F59E0B;
+  --rds-color-danger: #F87171;
+  --rds-color-info: #697FC6;
+  --rds-color-focus: #06B6D4;
+  --rds-color-overlay: rgba(0, 0, 0, 0.7);
+  --rds-color-shadow-rgb: 0 0 0;
+  --rds-color-primary-text: #F5F5F0;
+  --rds-color-accent-text: #06B6D4;
+  --rds-color-success-text: #10B981;
+  --rds-color-warning-text: #F59E0B;
+  --rds-color-danger-text: #F87171;
+  --rds-color-info-text: #697FC6;
+  --rds-color-on-primary: #0D0F12;
+  --rds-color-primary-strong: #F5F5F0;
+}
+:root[data-theme="dark"][data-brand="robo-lab"],
+:root[data-theme="dark"] [data-brand="robo-lab"] {
+  --rds-color-surface: #0A1226;
+  --rds-color-surface-raised: #183169;
+  --rds-color-surface-sunken: #060B18;
+  --rds-color-surface-inverse: #D0E8FA;
+  --rds-color-text: #D0E8FA;
+  --rds-color-text-muted: #A0D0F8;
+  --rds-color-text-subtle: #65B2F5;
+  --rds-color-text-inverse: #20305B;
+  --rds-color-border: #233F60;
+  --rds-color-border-strong: #3C6A98;
+  --rds-color-primary: #00C3FF;
+  --rds-color-primary-hover: #40D2FF;
+  --rds-color-primary-active: #65B2F5;
+  --rds-color-primary-subtle: rgba(0, 195, 255, 0.16);
+  --rds-color-accent: #65B2F5;
+  --rds-color-accent-subtle: rgba(101, 178, 245, 0.18);
+  --rds-color-success: #1EB2A9;
+  --rds-color-warning: #FFD166;
+  --rds-color-danger: #F97551;
+  --rds-color-info: #00C3FF;
+  --rds-color-focus: #00C3FF;
+  --rds-color-overlay: rgba(0, 0, 0, 0.7);
+  --rds-color-shadow-rgb: 0 0 0;
+  --rds-color-primary-text: #00C3FF;
+  --rds-color-accent-text: #65B2F5;
+  --rds-color-success-text: #1EB2A9;
+  --rds-color-warning-text: #FFD166;
+  --rds-color-danger-text: #F97551;
+  --rds-color-info-text: #00C3FF;
+  --rds-color-on-primary: #0D0F12;
+  --rds-color-primary-strong: #00C3FF;
+}
+:root[data-theme="dark"][data-brand="robo-university"],
+:root[data-theme="dark"] [data-brand="robo-university"] {
+  --rds-color-surface: #12160C;
+  --rds-color-surface-raised: #304528;
+  --rds-color-surface-sunken: #0B0E07;
+  --rds-color-surface-inverse: #EFF5E3;
+  --rds-color-text: #EFF5E3;
+  --rds-color-text-muted: #B5C79D;
+  --rds-color-text-subtle: #7B9957;
+  --rds-color-text-inverse: #39411E;
+  --rds-color-border: #2F3B21;
+  --rds-color-border-strong: #576841;
+  --rds-color-primary: #ABDC1D;
+  --rds-color-primary-hover: #C0E556;
+  --rds-color-primary-active: #6EC207;
+  --rds-color-primary-subtle: rgba(171, 220, 29, 0.16);
+  --rds-color-accent: #AE7FC8;
+  --rds-color-accent-subtle: rgba(147, 84, 182, 0.22);
+  --rds-color-success: #ABDC1D;
+  --rds-color-warning: #F9AB02;
+  --rds-color-danger: #F87171;
+  --rds-color-info: #B387CC;
+  --rds-color-focus: #ABDC1D;
+  --rds-color-overlay: rgba(0, 0, 0, 0.7);
+  --rds-color-shadow-rgb: 0 0 0;
+  --rds-color-primary-text: #ABDC1D;
+  --rds-color-accent-text: #C19ED5;
+  --rds-color-success-text: #ABDC1D;
+  --rds-color-warning-text: #F9AB02;
+  --rds-color-danger-text: #F98B8B;
+  --rds-color-info-text: #C19DD5;
+  --rds-color-on-primary: #0D0F12;
+  --rds-color-primary-strong: #ABDC1D;
+}
+:root[data-theme="dark"][data-brand="coop-lab"],
+:root[data-theme="dark"] [data-brand="coop-lab"] {
+  --rds-color-surface: #1A1012;
+  --rds-color-surface-raised: #26171A;
+  --rds-color-surface-sunken: #120A0C;
+  --rds-color-surface-inverse: #FCEEEF;
+  --rds-color-text: #FCEEEF;
+  --rds-color-text-muted: #FDB9B5;
+  --rds-color-text-subtle: #FD847B;
+  --rds-color-text-inverse: #1A1416;
+  --rds-color-border: #532D2C;
+  --rds-color-border-strong: #8F4F4D;
+  --rds-color-primary: #FD675B;
+  --rds-color-primary-hover: #FD847B;
+  --rds-color-primary-active: #FF3F33;
+  --rds-color-primary-subtle: rgba(253, 103, 91, 0.16);
+  --rds-color-accent: #AF80DA;
+  --rds-color-accent-subtle: rgba(152, 92, 207, 0.22);
+  --rds-color-success: #10B981;
+  --rds-color-warning: #FBBF24;
+  --rds-color-danger: #FD847B;
+  --rds-color-info: #4DA7F9;
+  --rds-color-focus: #FD847B;
+  --rds-color-overlay: rgba(0, 0, 0, 0.7);
+  --rds-color-shadow-rgb: 0 0 0;
+  --rds-color-primary-text: #FD675B;
+  --rds-color-accent-text: #AF80DA;
+  --rds-color-success-text: #10B981;
+  --rds-color-warning-text: #FBBF24;
+  --rds-color-danger-text: #FD847B;
+  --rds-color-info-text: #4DA7F9;
+  --rds-color-on-primary: #0D0F12;
+  --rds-color-primary-strong: #FD675B;
+}
+
+/* No data-brand set: fall back to the parent brand rather than to nothing. */
+:root:not([data-brand]) {
+  --rds-palette-primary: #000000;
+  --rds-palette-robo-black: #0D0F12;
+  --rds-palette-circuit-white: #F5F5F0;
+  --rds-palette-precision-blue: #1E40AF;
+  --rds-palette-sync-cyan: #06B6D4;
+  --rds-palette-coop-amber: #F59E0B;
+  --rds-palette-steel-gray: #475569;
+  --rds-palette-deep-circuit: #0F172A;
+  --rds-palette-pulse-green: #10B981;
+  --rds-color-surface: #F5F5F0;
+  --rds-color-surface-raised: #FFFFFF;
+  --rds-color-surface-sunken: #E9EAE5;
+  --rds-color-surface-inverse: #0D0F12;
+  --rds-color-text: #0D0F12;
+  --rds-color-text-muted: #475569;
+  --rds-color-text-subtle: #7B8592;
+  --rds-color-text-inverse: #F5F5F0;
+  --rds-color-border: #CFD2D2;
+  --rds-color-border-strong: #868D95;
+  --rds-color-primary: #000000;
+  --rds-color-primary-hover: #1E40AF;
+  --rds-color-primary-active: #193180;
+  --rds-color-primary-subtle: rgba(0, 0, 0, 0.06);
+  --rds-color-accent: #06B6D4;
+  --rds-color-accent-subtle: rgba(6, 182, 212, 0.12);
+  --rds-color-success: #10B981;
+  --rds-color-warning: #F59E0B;
+  --rds-color-danger: #AD2728;
+  --rds-color-info: #1E40AF;
+  --rds-color-focus: #1E40AF;
+  --rds-color-overlay: rgba(13, 15, 18, 0.55);
+  --rds-color-shadow-rgb: 13 15 18;
+  --rds-color-primary-text: #000000;
+  --rds-color-accent-text: #047386;
+  --rds-color-success-text: #0A7854;
+  --rds-color-warning-text: #915D06;
+  --rds-color-danger-text: #AD2728;
+  --rds-color-info-text: #1E40AF;
+  --rds-color-on-primary: #FFFFFF;
+  --rds-color-primary-strong: #000000;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-brand]):not([data-theme="light"]) {
+    --rds-color-surface: #0D0F12;
+    --rds-color-surface-raised: #0F172A;
+    --rds-color-surface-sunken: #000000;
+    --rds-color-surface-inverse: #F5F5F0;
+    --rds-color-text: #F5F5F0;
+    --rds-color-text-muted: #9EA5AD;
+    --rds-color-text-subtle: #78828F;
+    --rds-color-text-inverse: #0D0F12;
+    --rds-color-border: #272F39;
+    --rds-color-border-strong: #546174;
+    --rds-color-primary: #F5F5F0;
+    --rds-color-primary-hover: #FFFFFF;
+    --rds-color-primary-active: #CACDCE;
+    --rds-color-primary-subtle: rgba(245, 245, 240, 0.1);
+    --rds-color-accent: #06B6D4;
+    --rds-color-accent-subtle: rgba(6, 182, 212, 0.18);
+    --rds-color-success: #10B981;
+    --rds-color-warning: #F59E0B;
+    --rds-color-danger: #F87171;
+    --rds-color-info: #697FC6;
+    --rds-color-focus: #06B6D4;
+    --rds-color-overlay: rgba(0, 0, 0, 0.7);
+    --rds-color-shadow-rgb: 0 0 0;
+    --rds-color-primary-text: #F5F5F0;
+    --rds-color-accent-text: #06B6D4;
+    --rds-color-success-text: #10B981;
+    --rds-color-warning-text: #F59E0B;
+    --rds-color-danger-text: #F87171;
+    --rds-color-info-text: #697FC6;
+    --rds-color-on-primary: #0D0F12;
+    --rds-color-primary-strong: #F5F5F0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --rds-duration-instant: 0ms;
+    --rds-duration-fast: 0ms;
+    --rds-duration-base: 0ms;
+    --rds-duration-slow: 0ms;
+    --rds-duration-glacial: 0ms;
+  }
+}

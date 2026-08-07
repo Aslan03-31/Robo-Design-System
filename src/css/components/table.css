@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Table
+   ========================================================================== */
+
+/* Wrap tables in this so wide content scrolls itself instead of the page. */
+.rds-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: var(--rds-border-hairline) solid var(--rds-color-border);
+  border-radius: var(--rds-radius-lg);
+}
+
+.rds-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--rds-text-body-sm);
+  background-color: var(--rds-color-surface-raised);
+}
+
+.rds-table caption {
+  padding: var(--rds-space-4);
+  text-align: left;
+  font-weight: var(--rds-weight-medium);
+  color: var(--rds-color-text-muted);
+}
+
+.rds-table th,
+.rds-table td {
+  padding: var(--rds-space-3) var(--rds-space-4);
+  text-align: left;
+  border-bottom: var(--rds-border-hairline) solid var(--rds-color-border);
+}
+
+.rds-table thead th {
+  position: sticky;
+  top: 0;
+  background-color: var(--rds-color-surface-sunken);
+  font-size: var(--rds-text-caption);
+  font-weight: var(--rds-weight-medium);
+  letter-spacing: var(--rds-tracking-wide);
+  text-transform: uppercase;
+  color: var(--rds-color-text-muted);
+}
+
+.rds-table tbody tr:last-child td { border-bottom: none; }
+
+.rds-table--hover tbody tr {
+  transition: background-color var(--rds-duration-fast) var(--rds-ease-standard);
+}
+
+.rds-table--hover tbody tr:hover { background-color: var(--rds-color-primary-subtle); }
+
+.rds-table--zebra tbody tr:nth-child(even) { background-color: var(--rds-color-surface-sunken); }
+
+/* Numeric columns line up on the decimal. */
+.rds-table [data-numeric] {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}

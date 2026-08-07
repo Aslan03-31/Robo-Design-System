@@ -1,0 +1,42 @@
+Copyright (c) 2026 Robo Co-op. All rights reserved.
+
+PROPRIETARY AND CONFIDENTIAL
+
+This repository, including its source code, design tokens, documentation, and all
+logo artwork, wordmarks, brand names, and colour specifications contained within it
+(collectively, the "Materials"), is the confidential and proprietary property of
+Robo Co-op.
+
+The Materials are NOT open source and are NOT licensed under any open source licence.
+
+No part of the Materials may be reproduced, distributed, published, sublicensed,
+transmitted, or used to create derivative works, in whole or in part, by any means,
+without the prior written permission of Robo Co-op.
+
+TRADE MARKS
+
+"Robo Co-op", "Robo Lab", "Co-op Lab" and "Robo University", together with their
+associated logos, marks, and wordmarks, are trade marks of Robo Co-op. Nothing in
+this repository grants any right or licence to use those trade marks. Permitted
+internal use does not extend to co-branding, endorsement, or any use implying
+affiliation.
+
+THIRD-PARTY COMPONENTS
+
+This repository references but does not redistribute the following typefaces:
+
+  - Roboto      — Copyright Google LLC, licensed under the Apache License 2.0
+  - Roboto Mono — Copyright Google LLC, licensed under the Apache License 2.0
+  - Noto Sans JP — Copyright Google LLC, licensed under the SIL Open Font License 1.1
+
+These typefaces are loaded from Google Fonts at runtime and are governed by their own
+licences, not by this one. If they are ever vendored into this repository, their
+licence texts must be included alongside them.
+
+NO WARRANTY
+
+THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE MATERIALS OR THE USE OR OTHER DEALINGS IN THE MATERIALS.

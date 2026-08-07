@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Button
+   Fills use --rds-color-primary-strong, not --rds-color-primary. The two are
+   usually identical; they diverge only where the raw brand colour cannot carry
+   its label at AA (Robo Lab, Co-op Lab). See scripts/build-tokens.mjs.
+   ========================================================================== */
+
+.rds-btn {
+  --_bg: transparent;
+  --_fg: var(--rds-color-text);
+  --_border: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--rds-space-2);
+
+  padding: var(--rds-space-3) var(--rds-space-6);
+  min-height: 44px;            /* WCAG 2.5.5 target size */
+
+  font-size: var(--rds-text-body-sm);
+  font-weight: var(--rds-weight-medium);
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+
+  color: var(--_fg);
+  background-color: var(--_bg);
+  border: var(--rds-border-hairline) solid var(--_border);
+  border-radius: var(--rds-radius-pill);
+
+  cursor: pointer;
+  transition: background-color var(--rds-duration-fast) var(--rds-ease-standard),
+              border-color     var(--rds-duration-fast) var(--rds-ease-standard),
+              color            var(--rds-duration-fast) var(--rds-ease-standard),
+              transform        var(--rds-duration-fast) var(--rds-ease-standard),
+              box-shadow       var(--rds-duration-base) var(--rds-ease-standard);
+}
+
+.rds-btn:hover:not(:disabled) { transform: translateY(-1px); }
+.rds-btn:active:not(:disabled) { transform: translateY(0); }
+
+.rds-btn:disabled,
+.rds-btn[aria-disabled='true'] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ---------------------------------------------------------------- variants */
+
+.rds-btn--primary {
+  --_bg: var(--rds-color-primary-strong);
+  --_fg: var(--rds-color-on-primary);
+  --_border: var(--rds-color-primary-strong);
+  box-shadow: var(--rds-elevation-1);
+}
+
+.rds-btn--primary:hover:not(:disabled) {
+  --_bg: var(--rds-color-primary-hover);
+  --_border: var(--rds-color-primary-hover);
+  box-shadow: var(--rds-elevation-3);
+}
+
+.rds-btn--primary:active:not(:disabled) {
+  --_bg: var(--rds-color-primary-active);
+  --_border: var(--rds-color-primary-active);
+}
+
+.rds-btn--secondary {
+  --_fg: var(--rds-color-text);
+  --_border: var(--rds-color-border-strong);
+}
+
+.rds-btn--secondary:hover:not(:disabled) {
+  --_bg: var(--rds-color-primary-subtle);
+  --_border: var(--rds-color-primary);
+  --_fg: var(--rds-color-primary-text);
+}
+
+.rds-btn--ghost {
+  --_fg: var(--rds-color-primary-text);
+  padding-inline: var(--rds-space-4);
+}
+
+.rds-btn--ghost:hover:not(:disabled) { --_bg: var(--rds-color-primary-subtle); }
+
+.rds-btn--danger {
+  --_bg: var(--rds-color-danger-text);
+  --_fg: var(--rds-color-surface-raised);
+  --_border: var(--rds-color-danger-text);
+}
+
+.rds-btn--danger:hover:not(:disabled) { filter: brightness(0.92); }
+
+/* ------------------------------------------------------------------ sizes */
+
+.rds-btn--sm {
+  min-height: 36px;
+  padding: var(--rds-space-2) var(--rds-space-4);
+  font-size: var(--rds-text-caption);
+}
+
+.rds-btn--lg {
+  min-height: 52px;
+  padding: var(--rds-space-4) var(--rds-space-8);
+  font-size: var(--rds-text-body);
+}
+
+.rds-btn--block { width: 100%; }
+
+/* Icon-only buttons still need an accessible name — use aria-label. */
+.rds-btn--icon {
+  padding: 0;
+  width: 44px;
+  aspect-ratio: 1;
+}
+
+.rds-btn--icon.rds-btn--sm { width: 36px; }
+
+.rds-btn__icon {
+  width: 1.15em;
+  height: 1.15em;
+  flex-shrink: 0;
+}

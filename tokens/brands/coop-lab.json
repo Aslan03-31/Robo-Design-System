@@ -1,0 +1,99 @@
+{
+  "$meta": {
+    "slug": "coop-lab",
+    "order": 4,
+    "name": "Co-op Lab",
+    "tagline": "Startup Together — Cooperative Entrepreneurship Lab",
+    "promise": "Let's Hack Capitalism.",
+    "descriptor": "Cooperative Entrepreneurship Lab",
+    "role": "Experiments with cooperative entrepreneurship, shared ownership, and new ways of distributing value.",
+    "pillars": [
+      "Building ventures through cooperation",
+      "Experimenting with shared ownership and governance",
+      "Distributing opportunity, power, and value more fairly"
+    ],
+    "source": "Brand Guidelines UPDATE.pdf p.10",
+    "onPrimaryPreference": "light"
+  },
+
+  "palette": {
+    "primary":       { "value": "#FF3F33", "name": "Primary" },
+    "coral":         { "value": "#FD675B", "name": "Coral" },
+    "salmon":        { "value": "#FD847B", "name": "Salmon" },
+    "blush":         { "value": "#FCEEEF", "name": "Blush" },
+    "crimson":       { "value": "#AD2728", "name": "Crimson" },
+    "burgundy":      { "value": "#812627", "name": "Burgundy" },
+    "creative":      { "value": "#985CCF", "name": "Creative" },
+    "cyan":          { "value": "#4DA7F9", "name": "Cyan" },
+    "growth-green":  { "value": "#10B981", "name": "Growth Green" }
+  },
+
+  "theme": {
+    "light": {
+      "$onPrimaryStrategy": "adjust",
+      "$comment": "White-on-red is what reads as a button; black-on-red reads as a warning label. So this theme holds white text and lets the fill darken by the minimum needed, rather than flipping the text to black.",
+
+      "surface":         { "mix": ["{palette.blush}", "#FFFFFF", 0.6] },
+      "surface-raised":  "#FFFFFF",
+      "surface-sunken":  "{palette.blush}",
+      "surface-inverse": "{palette.burgundy}",
+
+      "text":            "#1A1416",
+      "text-muted":      { "mix": ["{palette.burgundy}", "#FFFFFF", 0.3] },
+      "text-subtle":     { "mix": ["{palette.burgundy}", "#FFFFFF", 0.52] },
+      "text-inverse":    "#FFFFFF",
+
+      "border":          { "mix": ["{palette.crimson}", "#FFFFFF", 0.85] },
+      "border-strong":   { "mix": ["{palette.crimson}", "#FFFFFF", 0.55] },
+
+      "primary":         "{palette.primary}",
+      "primary-hover":   "{palette.crimson}",
+      "primary-active":  "{palette.burgundy}",
+      "primary-subtle":  { "alpha": ["{palette.primary}", 0.08] },
+
+      "accent":          "{palette.creative}",
+      "accent-subtle":   { "alpha": ["{palette.creative}", 0.12] },
+
+      "success":         "{palette.growth-green}",
+      "warning":         "#F59E0B",
+      "danger":          "{palette.crimson}",
+      "info":            "{palette.cyan}",
+
+      "focus":           "{palette.crimson}",
+      "overlay":         { "alpha": ["{palette.burgundy}", 0.55] },
+      "shadow-rgb":      "{palette.burgundy}"
+    },
+
+    "dark": {
+      "surface":         "#1A1012",
+      "surface-raised":  "#26171A",
+      "surface-sunken":  "#120A0C",
+      "surface-inverse": "{palette.blush}",
+
+      "text":            "{palette.blush}",
+      "text-muted":      { "mix": ["{palette.salmon}", "{palette.blush}", 0.5] },
+      "text-subtle":     "{palette.salmon}",
+      "text-inverse":    "#1A1416",
+
+      "border":          { "mix": ["{palette.salmon}", "#1A1012", 0.75] },
+      "border-strong":   { "mix": ["{palette.salmon}", "#1A1012", 0.5] },
+
+      "primary":         "{palette.coral}",
+      "primary-hover":   "{palette.salmon}",
+      "primary-active":  "{palette.primary}",
+      "primary-subtle":  { "alpha": ["{palette.coral}", 0.16] },
+
+      "accent":          { "mix": ["{palette.creative}", "#FFFFFF", 0.22] },
+      "accent-subtle":   { "alpha": ["{palette.creative}", 0.22] },
+
+      "success":         "{palette.growth-green}",
+      "warning":         "#FBBF24",
+      "danger":          "{palette.salmon}",
+      "info":            "{palette.cyan}",
+
+      "focus":           "{palette.salmon}",
+      "overlay":         { "alpha": ["#000000", 0.7] },
+      "shadow-rgb":      "#000000"
+    }
+  }
+}

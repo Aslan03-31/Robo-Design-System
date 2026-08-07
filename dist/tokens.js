@@ -1,0 +1,807 @@
+// GENERATED FILE. Edit tokens/*.json and run `npm run build`.
+export const tokens = {
+  "core": {
+    "$meta": {
+      "name": "Robo Co-op — core tokens",
+      "description": "Brand-agnostic foundations. Every value here is identical across all four brands; only tokens/brands/*.json change per brand.",
+      "source": "Brand Guidelines UPDATE.pdf, pp. 13-14 (typography). Values marked \"extends\": true are NOT in the guidelines — they fill gaps in an otherwise unusable scale and are flagged so they can be ratified or removed.",
+      "unit": "px unless stated"
+    },
+    "font": {
+      "family": {
+        "latin": {
+          "value": "'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif",
+          "comment": "Guidelines p.13. Roboto is the only approved Latin face."
+        },
+        "japanese": {
+          "value": "'Noto Sans JP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif",
+          "comment": "Guidelines p.14. Applied via :lang(ja) or .rds-ja — do not mix mid-sentence. Fallbacks cover macOS (Hiragino), Windows (Yu Gothic, Meiryo) before reaching generic sans."
+        },
+        "mono": {
+          "value": "'Roboto Mono', ui-monospace, 'Cascadia Code', monospace",
+          "extends": true,
+          "comment": "No mono face is specified. Roboto Mono is the family-consistent choice for code and tabular data."
+        }
+      },
+      "weight": {
+        "light": {
+          "value": 300,
+          "role": "Caption and annotation"
+        },
+        "regular": {
+          "value": 400,
+          "role": "Body copy"
+        },
+        "medium": {
+          "value": 500,
+          "role": "Subheading"
+        },
+        "bold": {
+          "value": 700,
+          "role": "Heading"
+        }
+      },
+      "$sizeNote": "The named hierarchy below is authored in POINTS, because the guidelines specify print. px = pt x 96/72, rounded to the nearest whole pixel. Body 12pt lands exactly on 16px and Caption 9pt on 12px, which is why the print and screen scales agree rather than merely coexisting.",
+      "size": {
+        "title": {
+          "pt": 60,
+          "value": 80,
+          "weight": "light",
+          "role": "Cover and hero titles"
+        },
+        "heading": {
+          "pt": 32,
+          "value": 43,
+          "weight": "bold",
+          "role": "Page and major section headings"
+        },
+        "subtitle": {
+          "pt": 24,
+          "value": 32,
+          "weight": "regular",
+          "role": "Standfirst beneath a title"
+        },
+        "section-header": {
+          "pt": 16,
+          "value": 21,
+          "weight": "bold",
+          "role": "Section headers within a page"
+        },
+        "subheading": {
+          "pt": 12,
+          "value": 16,
+          "weight": "bold",
+          "role": "Inline subheading above a paragraph"
+        },
+        "body": {
+          "pt": 12,
+          "value": 16,
+          "weight": "regular",
+          "role": "Paragraph text"
+        },
+        "quote": {
+          "pt": 15,
+          "value": 20,
+          "weight": "regular",
+          "style": "italic",
+          "role": "Pull quotes"
+        },
+        "caption": {
+          "pt": 9,
+          "value": 12,
+          "weight": "light",
+          "role": "Labels, footnotes"
+        },
+        "body-lg": {
+          "value": 18,
+          "extends": true,
+          "weight": "regular",
+          "role": "Lead paragraphs"
+        },
+        "body-sm": {
+          "value": 14,
+          "extends": true,
+          "weight": "regular",
+          "role": "Dense UI text, table cells"
+        },
+        "caption-sm": {
+          "value": 10,
+          "extends": true,
+          "weight": "light",
+          "role": "Minimum legible size — use sparingly"
+        }
+      },
+      "$aliasNote": "Kept so existing markup and the h1..h3 elements keep working. Each points at a named role above; they are not independent sizes.",
+      "sizeAlias": {
+        "display": "title",
+        "h1": "heading",
+        "h2": "subtitle",
+        "h3": "section-header",
+        "h4": "subheading"
+      },
+      "lineHeight": {
+        "tight": {
+          "value": 1.15,
+          "role": "Display and H1"
+        },
+        "snug": {
+          "value": 1.3,
+          "role": "H2, H3"
+        },
+        "normal": {
+          "value": 1.6,
+          "role": "Body copy"
+        },
+        "relaxed": {
+          "value": 1.75,
+          "role": "Long-form reading"
+        },
+        "ja": {
+          "value": 1.8,
+          "role": "Japanese body copy",
+          "comment": "Japanese sets without word spaces and with full-height glyphs, so Latin leading reads cramped. Size scale is shared; only leading changes."
+        },
+        "ja-tight": {
+          "value": 1.4,
+          "role": "Japanese headings"
+        }
+      },
+      "letterSpacing": {
+        "tighter": {
+          "value": "-0.02em",
+          "role": "Display"
+        },
+        "tight": {
+          "value": "-0.01em",
+          "role": "Headings"
+        },
+        "normal": {
+          "value": "0em",
+          "role": "Body"
+        },
+        "wide": {
+          "value": "0.02em",
+          "role": "Small caps, labels"
+        },
+        "widest": {
+          "value": "0.12em",
+          "role": "Eyebrow / badge text"
+        }
+      }
+    },
+    "space": {
+      "0": 0,
+      "1": 4,
+      "2": 8,
+      "3": 12,
+      "4": 16,
+      "5": 20,
+      "6": 24,
+      "8": 32,
+      "10": 40,
+      "12": 48,
+      "16": 64,
+      "20": 80,
+      "24": 96,
+      "32": 128,
+      "$comment": "4px base grid. Named by step, not by use, so components stay composable."
+    },
+    "radius": {
+      "none": 0,
+      "sm": 4,
+      "md": 8,
+      "lg": 16,
+      "xl": 24,
+      "pill": 999,
+      "$comment": "pill is the house style for buttons and badges, carried over from existing Robo Co-op web work."
+    },
+    "border": {
+      "hairline": 1,
+      "thick": 2,
+      "heavy": 4
+    },
+    "motion": {
+      "duration": {
+        "instant": "0ms",
+        "fast": "120ms",
+        "base": "240ms",
+        "slow": "400ms",
+        "glacial": "700ms"
+      },
+      "easing": {
+        "standard": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "accelerate": "cubic-bezier(0.4, 0, 1, 1)",
+        "decelerate": "cubic-bezier(0, 0, 0.2, 1)",
+        "linear": "linear"
+      },
+      "$comment": "standard easing is inherited from the existing Robo Lab site so new work matches what already ships."
+    },
+    "elevation": {
+      "0": "none",
+      "1": "0 1px 2px rgba(var(--rds-shadow-rgb) / 0.06), 0 1px 3px rgba(var(--rds-shadow-rgb) / 0.10)",
+      "2": "0 4px 6px rgba(var(--rds-shadow-rgb) / 0.05), 0 2px 4px rgba(var(--rds-shadow-rgb) / 0.06)",
+      "3": "0 10px 30px rgba(var(--rds-shadow-rgb) / 0.10)",
+      "4": "0 20px 40px rgba(var(--rds-shadow-rgb) / 0.15)",
+      "$comment": "Shadow colour is brand-dependent and resolved per theme via --rds-shadow-rgb."
+    },
+    "breakpoint": {
+      "sm": 480,
+      "md": 768,
+      "lg": 1024,
+      "xl": 1300,
+      "$comment": "xl matches the 1300px container already used on robo-lab web work."
+    },
+    "container": {
+      "narrow": 720,
+      "base": 1024,
+      "wide": 1300
+    },
+    "focus": {
+      "width": 3,
+      "offset": 2,
+      "$comment": "Ring colour comes from the brand's --rds-color-focus."
+    }
+  },
+  "brands": {
+    "robo-coop": {
+      "meta": {
+        "slug": "robo-coop",
+        "order": 1,
+        "name": "Robo Co-op",
+        "tagline": "Support together — Human⇄Machine Cooperative OS",
+        "promise": "Updating Humanity through Solidarity.",
+        "descriptor": "Human−Machine Cooperative OS",
+        "role": "The shared philosophy, governance and operating foundation that enables people and machines to create value together. It exists to ensure that technological progress expands human agency — not only efficiency.",
+        "pillars": [
+          "Learn what is changing",
+          "Build what should exist",
+          "Share what we create"
+        ],
+        "source": "Brand Guidelines UPDATE.pdf p.07",
+        "onPrimaryPreference": "light"
+      },
+      "palette": {
+        "primary": {
+          "value": "#000000",
+          "name": "Primary"
+        },
+        "robo-black": {
+          "value": "#0D0F12",
+          "name": "Robo Black"
+        },
+        "circuit-white": {
+          "value": "#F5F5F0",
+          "name": "Circuit White"
+        },
+        "precision-blue": {
+          "value": "#1E40AF",
+          "name": "Precision Blue"
+        },
+        "sync-cyan": {
+          "value": "#06B6D4",
+          "name": "Sync Cyan"
+        },
+        "coop-amber": {
+          "value": "#F59E0B",
+          "name": "Coop Amber"
+        },
+        "steel-gray": {
+          "value": "#475569",
+          "name": "Steel Gray"
+        },
+        "deep-circuit": {
+          "value": "#0F172A",
+          "name": "Deep Circuit"
+        },
+        "pulse-green": {
+          "value": "#10B981",
+          "name": "Pulse Green"
+        }
+      },
+      "themes": {
+        "light": {
+          "tokens": {
+            "surface": "#F5F5F0",
+            "surface-raised": "#FFFFFF",
+            "surface-sunken": "#E9EAE5",
+            "surface-inverse": "#0D0F12",
+            "text": "#0D0F12",
+            "text-muted": "#475569",
+            "text-subtle": "#7B8592",
+            "text-inverse": "#F5F5F0",
+            "border": "#CFD2D2",
+            "border-strong": "#868D95",
+            "primary": "#000000",
+            "primary-hover": "#1E40AF",
+            "primary-active": "#193180",
+            "primary-subtle": "rgba(0, 0, 0, 0.06)",
+            "accent": "#06B6D4",
+            "accent-subtle": "rgba(6, 182, 212, 0.12)",
+            "success": "#10B981",
+            "warning": "#F59E0B",
+            "danger": "#AD2728",
+            "info": "#1E40AF",
+            "focus": "#1E40AF",
+            "overlay": "rgba(13, 15, 18, 0.55)",
+            "shadow-rgb": "13 15 18",
+            "primary-text": "#000000",
+            "accent-text": "#047386",
+            "success-text": "#0A7854",
+            "warning-text": "#915D06",
+            "danger-text": "#AD2728",
+            "info-text": "#1E40AF",
+            "on-primary": "#FFFFFF",
+            "primary-strong": "#000000"
+          },
+          "meta": {
+            "onPrimaryRatio": 21,
+            "primaryAdjusted": false,
+            "adjustSteps": 0
+          }
+        },
+        "dark": {
+          "tokens": {
+            "surface": "#0D0F12",
+            "surface-raised": "#0F172A",
+            "surface-sunken": "#000000",
+            "surface-inverse": "#F5F5F0",
+            "text": "#F5F5F0",
+            "text-muted": "#9EA5AD",
+            "text-subtle": "#78828F",
+            "text-inverse": "#0D0F12",
+            "border": "#272F39",
+            "border-strong": "#546174",
+            "primary": "#F5F5F0",
+            "primary-hover": "#FFFFFF",
+            "primary-active": "#CACDCE",
+            "primary-subtle": "rgba(245, 245, 240, 0.1)",
+            "accent": "#06B6D4",
+            "accent-subtle": "rgba(6, 182, 212, 0.18)",
+            "success": "#10B981",
+            "warning": "#F59E0B",
+            "danger": "#F87171",
+            "info": "#697FC6",
+            "focus": "#06B6D4",
+            "overlay": "rgba(0, 0, 0, 0.7)",
+            "shadow-rgb": "0 0 0",
+            "primary-text": "#F5F5F0",
+            "accent-text": "#06B6D4",
+            "success-text": "#10B981",
+            "warning-text": "#F59E0B",
+            "danger-text": "#F87171",
+            "info-text": "#697FC6",
+            "on-primary": "#0D0F12",
+            "primary-strong": "#F5F5F0"
+          },
+          "meta": {
+            "onPrimaryRatio": 17.55,
+            "primaryAdjusted": false,
+            "adjustSteps": 0
+          }
+        }
+      }
+    },
+    "robo-lab": {
+      "meta": {
+        "slug": "robo-lab",
+        "order": 2,
+        "name": "Robo Lab",
+        "tagline": "Work Together — Pioneering Systemic Lab",
+        "promise": "Scale Innovation Without Borders.",
+        "descriptor": "Pioneering Systemic Lab",
+        "role": "Turns emerging technologies into real-world systems — and systems into systemic change.",
+        "pillars": [
+          "Exploring and testing emerging technologies",
+          "Prototyping and engineering real-world systems",
+          "Scaling systemic innovation across borders"
+        ],
+        "source": "Brand Guidelines UPDATE.pdf p.08",
+        "onPrimaryPreference": "light"
+      },
+      "palette": {
+        "primary": {
+          "value": "#007DD1",
+          "name": "Primary"
+        },
+        "electric-cyan": {
+          "value": "#00C3FF",
+          "name": "Electric Cyan",
+          "note": "Guidelines label reads #00C3FF; the vector swatch fill is #00C3EF. Label taken as canonical — it matches shipped Robo Lab web work."
+        },
+        "sky-blue": {
+          "value": "#65B2F5",
+          "name": "Sky Blue"
+        },
+        "ice-blue": {
+          "value": "#D0E8FA",
+          "name": "Ice Blue"
+        },
+        "midnight-blue": {
+          "value": "#20305B",
+          "name": "Midnight Blue"
+        },
+        "deep-navy": {
+          "value": "#183169",
+          "name": "Deep Navy",
+          "note": "Printed as \"Deeo Navy\" in the guidelines — typo."
+        },
+        "tech-orange": {
+          "value": "#F75326",
+          "name": "Tech Orange"
+        },
+        "teal": {
+          "value": "#1EB2A9",
+          "name": "Teal"
+        },
+        "alert-yellow": {
+          "value": "#FFD166",
+          "name": "Alert Yellow"
+        }
+      },
+      "themes": {
+        "light": {
+          "tokens": {
+            "surface": "#F8FCFE",
+            "surface-raised": "#FFFFFF",
+            "surface-sunken": "#EAF5FD",
+            "surface-inverse": "#20305B",
+            "text": "#20305B",
+            "text-muted": "#636E8C",
+            "text-subtle": "#8A92A6",
+            "text-inverse": "#FFFFFF",
+            "border": "#E0E2E8",
+            "border-strong": "#8D92A1",
+            "primary": "#007DD1",
+            "primary-hover": "#183169",
+            "primary-active": "#20305B",
+            "primary-subtle": "rgba(0, 125, 209, 0.08)",
+            "accent": "#00C3FF",
+            "accent-subtle": "rgba(0, 195, 255, 0.14)",
+            "success": "#1EB2A9",
+            "warning": "#FFD166",
+            "danger": "#F75326",
+            "info": "#007DD1",
+            "focus": "#007DD1",
+            "overlay": "rgba(32, 48, 91, 0.55)",
+            "shadow-rgb": "32 48 91",
+            "primary-text": "#006FBA",
+            "accent-text": "#007599",
+            "success-text": "#157B75",
+            "warning-text": "#826B34",
+            "danger-text": "#C6421E",
+            "info-text": "#0073C0",
+            "on-primary": "#FFFFFF",
+            "primary-strong": "#0079CB"
+          },
+          "meta": {
+            "onPrimaryRatio": 4.57,
+            "primaryAdjusted": true,
+            "adjustSteps": 3
+          }
+        },
+        "dark": {
+          "tokens": {
+            "surface": "#0A1226",
+            "surface-raised": "#183169",
+            "surface-sunken": "#060B18",
+            "surface-inverse": "#D0E8FA",
+            "text": "#D0E8FA",
+            "text-muted": "#A0D0F8",
+            "text-subtle": "#65B2F5",
+            "text-inverse": "#20305B",
+            "border": "#233F60",
+            "border-strong": "#3C6A98",
+            "primary": "#00C3FF",
+            "primary-hover": "#40D2FF",
+            "primary-active": "#65B2F5",
+            "primary-subtle": "rgba(0, 195, 255, 0.16)",
+            "accent": "#65B2F5",
+            "accent-subtle": "rgba(101, 178, 245, 0.18)",
+            "success": "#1EB2A9",
+            "warning": "#FFD166",
+            "danger": "#F97551",
+            "info": "#00C3FF",
+            "focus": "#00C3FF",
+            "overlay": "rgba(0, 0, 0, 0.7)",
+            "shadow-rgb": "0 0 0",
+            "primary-text": "#00C3FF",
+            "accent-text": "#65B2F5",
+            "success-text": "#1EB2A9",
+            "warning-text": "#FFD166",
+            "danger-text": "#F97551",
+            "info-text": "#00C3FF",
+            "on-primary": "#0D0F12",
+            "primary-strong": "#00C3FF"
+          },
+          "meta": {
+            "onPrimaryRatio": 9.37,
+            "primaryAdjusted": false,
+            "adjustSteps": 0
+          }
+        }
+      }
+    },
+    "robo-university": {
+      "meta": {
+        "slug": "robo-university",
+        "order": 3,
+        "name": "Robo University",
+        "tagline": "Learn Together — Explorative Digital Education",
+        "promise": "The Never-Ending Update.",
+        "descriptor": "Explorative Digital Education",
+        "role": "Explores emerging tools, ideas and ways of learning, and keeps people continuously updating.",
+        "pillars": [
+          "Exploring emerging tools, ideas, and ways of learning",
+          "Developing adaptive skills and digital agency",
+          "Keeping people and communities continuously updating"
+        ],
+        "source": "Brand Guidelines UPDATE.pdf p.09",
+        "onPrimaryPreference": "dark",
+        "$onPrimaryNote": "Fresh lime cannot carry white text — #6EC207 against white is only 2.24:1. Darkening it far enough to pass would destroy the hue, so this brand takes dark text on its primary instead (9.4:1)."
+      },
+      "palette": {
+        "primary": {
+          "value": "#6EC207",
+          "name": "Primary"
+        },
+        "fresh-lime": {
+          "value": "#ABDC1D",
+          "name": "Fresh Lime"
+        },
+        "robo-green": {
+          "value": "#4E8E29",
+          "name": "Robo Green"
+        },
+        "sage": {
+          "value": "#7B9957",
+          "name": "Sage"
+        },
+        "deep-forest": {
+          "value": "#39411E",
+          "name": "Deep Forest"
+        },
+        "mint-cream": {
+          "value": "#EFF5E3",
+          "name": "Mint Cream",
+          "note": "Guidelines label reads #39411E, a copy-paste of Deep Forest beside it. The real vector swatch fill is #EFF5E3 and is used here."
+        },
+        "mint": {
+          "value": "#304528",
+          "name": "Mint",
+          "note": "Named \"Mint\" in the guidelines but is a dark forest tone, not a mint. Name kept for traceability."
+        },
+        "energy-purple": {
+          "value": "#9354B6",
+          "name": "Energy Purple"
+        },
+        "achieve-gold": {
+          "value": "#F9AB02",
+          "name": "Achieve Gold",
+          "note": "Printed as \"Achive Gold\" in the guidelines — typo."
+        }
+      },
+      "themes": {
+        "light": {
+          "tokens": {
+            "surface": "#F7FAF1",
+            "surface-raised": "#FFFFFF",
+            "surface-sunken": "#EFF5E3",
+            "surface-inverse": "#39411E",
+            "text": "#39411E",
+            "text-muted": "#6F755C",
+            "text-subtle": "#8D9180",
+            "text-inverse": "#EFF5E3",
+            "border": "#E1E3DD",
+            "border-strong": "#889577",
+            "primary": "#6EC207",
+            "primary-hover": "#4E8E29",
+            "primary-active": "#39411E",
+            "primary-subtle": "rgba(110, 194, 7, 0.12)",
+            "accent": "#9354B6",
+            "accent-subtle": "rgba(147, 84, 182, 0.12)",
+            "success": "#4E8E29",
+            "warning": "#F9AB02",
+            "danger": "#AD2728",
+            "info": "#9354B6",
+            "focus": "#4E8E29",
+            "overlay": "rgba(57, 65, 30, 0.55)",
+            "shadow-rgb": "57 65 30",
+            "primary-text": "#457A04",
+            "accent-text": "#894EA9",
+            "success-text": "#447C24",
+            "warning-text": "#936501",
+            "danger-text": "#AD2728",
+            "info-text": "#9354B6",
+            "on-primary": "#0D0F12",
+            "primary-strong": "#6EC207"
+          },
+          "meta": {
+            "onPrimaryRatio": 8.58,
+            "primaryAdjusted": false,
+            "adjustSteps": 0
+          }
+        },
+        "dark": {
+          "tokens": {
+            "surface": "#12160C",
+            "surface-raised": "#304528",
+            "surface-sunken": "#0B0E07",
+            "surface-inverse": "#EFF5E3",
+            "text": "#EFF5E3",
+            "text-muted": "#B5C79D",
+            "text-subtle": "#7B9957",
+            "text-inverse": "#39411E",
+            "border": "#2F3B21",
+            "border-strong": "#576841",
+            "primary": "#ABDC1D",
+            "primary-hover": "#C0E556",
+            "primary-active": "#6EC207",
+            "primary-subtle": "rgba(171, 220, 29, 0.16)",
+            "accent": "#AE7FC8",
+            "accent-subtle": "rgba(147, 84, 182, 0.22)",
+            "success": "#ABDC1D",
+            "warning": "#F9AB02",
+            "danger": "#F87171",
+            "info": "#B387CC",
+            "focus": "#ABDC1D",
+            "overlay": "rgba(0, 0, 0, 0.7)",
+            "shadow-rgb": "0 0 0",
+            "primary-text": "#ABDC1D",
+            "accent-text": "#C19ED5",
+            "success-text": "#ABDC1D",
+            "warning-text": "#F9AB02",
+            "danger-text": "#F98B8B",
+            "info-text": "#C19DD5",
+            "on-primary": "#0D0F12",
+            "primary-strong": "#ABDC1D"
+          },
+          "meta": {
+            "onPrimaryRatio": 11.87,
+            "primaryAdjusted": false,
+            "adjustSteps": 0
+          }
+        }
+      }
+    },
+    "coop-lab": {
+      "meta": {
+        "slug": "coop-lab",
+        "order": 4,
+        "name": "Co-op Lab",
+        "tagline": "Startup Together — Cooperative Entrepreneurship Lab",
+        "promise": "Let's Hack Capitalism.",
+        "descriptor": "Cooperative Entrepreneurship Lab",
+        "role": "Experiments with cooperative entrepreneurship, shared ownership, and new ways of distributing value.",
+        "pillars": [
+          "Building ventures through cooperation",
+          "Experimenting with shared ownership and governance",
+          "Distributing opportunity, power, and value more fairly"
+        ],
+        "source": "Brand Guidelines UPDATE.pdf p.10",
+        "onPrimaryPreference": "light"
+      },
+      "palette": {
+        "primary": {
+          "value": "#FF3F33",
+          "name": "Primary"
+        },
+        "coral": {
+          "value": "#FD675B",
+          "name": "Coral"
+        },
+        "salmon": {
+          "value": "#FD847B",
+          "name": "Salmon"
+        },
+        "blush": {
+          "value": "#FCEEEF",
+          "name": "Blush"
+        },
+        "crimson": {
+          "value": "#AD2728",
+          "name": "Crimson"
+        },
+        "burgundy": {
+          "value": "#812627",
+          "name": "Burgundy"
+        },
+        "creative": {
+          "value": "#985CCF",
+          "name": "Creative"
+        },
+        "cyan": {
+          "value": "#4DA7F9",
+          "name": "Cyan"
+        },
+        "growth-green": {
+          "value": "#10B981",
+          "name": "Growth Green"
+        }
+      },
+      "themes": {
+        "light": {
+          "tokens": {
+            "surface": "#FEF8F9",
+            "surface-raised": "#FFFFFF",
+            "surface-sunken": "#FCEEEF",
+            "surface-inverse": "#812627",
+            "text": "#1A1416",
+            "text-muted": "#9F6263",
+            "text-subtle": "#AE8686",
+            "text-inverse": "#FFFFFF",
+            "border": "#F3DFDF",
+            "border-strong": "#B58383",
+            "primary": "#FF3F33",
+            "primary-hover": "#AD2728",
+            "primary-active": "#812627",
+            "primary-subtle": "rgba(255, 63, 51, 0.08)",
+            "accent": "#985CCF",
+            "accent-subtle": "rgba(152, 92, 207, 0.12)",
+            "success": "#10B981",
+            "warning": "#F59E0B",
+            "danger": "#AD2728",
+            "info": "#4DA7F9",
+            "focus": "#AD2728",
+            "overlay": "rgba(129, 38, 39, 0.55)",
+            "shadow-rgb": "129 38 39",
+            "primary-text": "#C93228",
+            "accent-text": "#8450B4",
+            "success-text": "#0B7C56",
+            "warning-text": "#986207",
+            "danger-text": "#AD2728",
+            "info-text": "#3472A9",
+            "on-primary": "#FFFFFF",
+            "primary-strong": "#DB362C"
+          },
+          "meta": {
+            "onPrimaryRatio": 4.59,
+            "primaryAdjusted": true,
+            "adjustSteps": 14
+          }
+        },
+        "dark": {
+          "tokens": {
+            "surface": "#1A1012",
+            "surface-raised": "#26171A",
+            "surface-sunken": "#120A0C",
+            "surface-inverse": "#FCEEEF",
+            "text": "#FCEEEF",
+            "text-muted": "#FDB9B5",
+            "text-subtle": "#FD847B",
+            "text-inverse": "#1A1416",
+            "border": "#532D2C",
+            "border-strong": "#8F4F4D",
+            "primary": "#FD675B",
+            "primary-hover": "#FD847B",
+            "primary-active": "#FF3F33",
+            "primary-subtle": "rgba(253, 103, 91, 0.16)",
+            "accent": "#AF80DA",
+            "accent-subtle": "rgba(152, 92, 207, 0.22)",
+            "success": "#10B981",
+            "warning": "#FBBF24",
+            "danger": "#FD847B",
+            "info": "#4DA7F9",
+            "focus": "#FD847B",
+            "overlay": "rgba(0, 0, 0, 0.7)",
+            "shadow-rgb": "0 0 0",
+            "primary-text": "#FD675B",
+            "accent-text": "#AF80DA",
+            "success-text": "#10B981",
+            "warning-text": "#FBBF24",
+            "danger-text": "#FD847B",
+            "info-text": "#4DA7F9",
+            "on-primary": "#0D0F12",
+            "primary-strong": "#FD675B"
+          },
+          "meta": {
+            "onPrimaryRatio": 6.64,
+            "primaryAdjusted": false,
+            "adjustSteps": 0
+          }
+        }
+      }
+    }
+  }
+};
+export const brands = Object.keys(tokens.brands);
+export default tokens;

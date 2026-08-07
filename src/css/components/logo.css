@@ -1,0 +1,86 @@
+/* ==========================================================================
+   Logo
+   Encodes the clear-space and minimum-size rules from the guidelines so they
+   are hard to break by accident.
+
+   CLEAR SPACE — 0.5X on all four sides, where X is the height of the mark.
+   Expressed against the logo's own size rather than a pixel value, so it
+   scales correctly at every size.
+
+   MINIMUM SIZE — 90px wide on screen, 25mm wide in print. Note this is a
+   WIDTH rule on the full horizontal lockup, not a height rule on the mark.
+   Below it the concentric line work fills in and the logo reads as a blob
+   ("DO NOT use low resolution versions of the logo").
+   ========================================================================== */
+
+.rds-logo {
+  --_size: 48px;
+  --_clear: calc(var(--_size) * 0.5);
+
+  display: inline-flex;
+  align-items: center;
+  padding: var(--_clear);
+  color: var(--rds-color-text);   /* drives the -current.svg variants */
+}
+
+.rds-logo > svg,
+.rds-logo > img {
+  height: var(--_size);
+  width: auto;
+  display: block;
+}
+
+/* Sizes are the mark's height. For the horizontal lockup the binding
+   constraint is width — see .rds-logo--horizontal below. */
+.rds-logo--xs { --_size: 24px; }
+.rds-logo--sm { --_size: 32px; }
+.rds-logo--md { --_size: 48px; }
+.rds-logo--lg { --_size: 72px; }
+.rds-logo--xl { --_size: 120px; }
+
+/* The horizontal lockup is roughly 1.8:1, so a 50px mark puts it at the 90px
+   minimum. min-width makes the floor structural: shrink the container and the
+   logo stops rather than dropping below spec. */
+.rds-logo--horizontal > svg,
+.rds-logo--horizontal > img {
+  height: calc(var(--_size) * 0.75);
+  min-width: 90px;
+}
+
+/* Print carries its own floor: 25mm wide. */
+@media print {
+  .rds-logo--horizontal > svg,
+  .rds-logo--horizontal > img { min-width: 25mm; }
+}
+
+/* Tint the themable (-current.svg) files. */
+.rds-logo--brand   { color: var(--rds-color-primary); }
+.rds-logo--inverse { color: var(--rds-color-text-inverse); }
+.rds-logo--mono    { color: currentColor; }
+
+/* The white plate version, for placing over photography — the guidelines
+   forbid putting the logo over an image that renders it illegible.
+   The literal white here is deliberate and must NOT be tokenised: the plate
+   stays white in dark mode because the artwork printed on it is dark. */
+.rds-logo--plated {
+  background: #FFFFFF;
+  border-radius: var(--rds-radius-md);
+}
+
+/* Co-branding: the partner logo must never dominate, overlap, or stagger
+   (guidelines p.12). This lays out a fixed divider and equal optical weight. */
+.rds-cobrand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--rds-space-6);
+}
+
+.rds-cobrand::after { content: none; }
+
+.rds-cobrand__divider {
+  width: var(--rds-border-hairline);
+  align-self: stretch;
+  min-height: 2.5em;
+  background: var(--rds-color-border-strong);
+  flex-shrink: 0;
+}

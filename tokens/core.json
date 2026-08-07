@@ -1,0 +1,157 @@
+{
+  "$meta": {
+    "name": "Robo Co-op — core tokens",
+    "description": "Brand-agnostic foundations. Every value here is identical across all four brands; only tokens/brands/*.json change per brand.",
+    "source": "Brand Guidelines UPDATE.pdf, pp. 13-14 (typography). Values marked \"extends\": true are NOT in the guidelines — they fill gaps in an otherwise unusable scale and are flagged so they can be ratified or removed.",
+    "unit": "px unless stated"
+  },
+
+  "font": {
+    "family": {
+      "latin": {
+        "value": "'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif",
+        "comment": "Guidelines p.13. Roboto is the only approved Latin face."
+      },
+      "japanese": {
+        "value": "'Noto Sans JP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif",
+        "comment": "Guidelines p.14. Applied via :lang(ja) or .rds-ja — do not mix mid-sentence. Fallbacks cover macOS (Hiragino), Windows (Yu Gothic, Meiryo) before reaching generic sans."
+      },
+      "mono": {
+        "value": "'Roboto Mono', ui-monospace, 'Cascadia Code', monospace",
+        "extends": true,
+        "comment": "No mono face is specified. Roboto Mono is the family-consistent choice for code and tabular data."
+      }
+    },
+
+    "weight": {
+      "light":   { "value": 300, "role": "Caption and annotation" },
+      "regular": { "value": 400, "role": "Body copy" },
+      "medium":  { "value": 500, "role": "Subheading" },
+      "bold":    { "value": 700, "role": "Heading" }
+    },
+
+    "$sizeNote": "The named hierarchy below is authored in POINTS, because the guidelines specify print. px = pt x 96/72, rounded to the nearest whole pixel. Body 12pt lands exactly on 16px and Caption 9pt on 12px, which is why the print and screen scales agree rather than merely coexisting.",
+
+    "size": {
+      "title":          { "pt": 60, "value": 80, "weight": "light",   "role": "Cover and hero titles" },
+      "heading":        { "pt": 32, "value": 43, "weight": "bold",    "role": "Page and major section headings" },
+      "subtitle":       { "pt": 24, "value": 32, "weight": "regular", "role": "Standfirst beneath a title" },
+      "section-header": { "pt": 16, "value": 21, "weight": "bold",    "role": "Section headers within a page" },
+      "subheading":     { "pt": 12, "value": 16, "weight": "bold",    "role": "Inline subheading above a paragraph" },
+      "body":           { "pt": 12, "value": 16, "weight": "regular", "role": "Paragraph text" },
+      "quote":          { "pt": 15, "value": 20, "weight": "regular", "style": "italic", "role": "Pull quotes" },
+      "caption":        { "pt": 9,  "value": 12, "weight": "light",   "role": "Labels, footnotes" },
+
+      "body-lg":    { "value": 18, "extends": true, "weight": "regular", "role": "Lead paragraphs" },
+      "body-sm":    { "value": 14, "extends": true, "weight": "regular", "role": "Dense UI text, table cells" },
+      "caption-sm": { "value": 10, "extends": true, "weight": "light",   "role": "Minimum legible size — use sparingly" }
+    },
+
+    "$aliasNote": "Kept so existing markup and the h1..h3 elements keep working. Each points at a named role above; they are not independent sizes.",
+
+    "sizeAlias": {
+      "display": "title",
+      "h1": "heading",
+      "h2": "subtitle",
+      "h3": "section-header",
+      "h4": "subheading"
+    },
+
+    "lineHeight": {
+      "tight":   { "value": 1.15, "role": "Display and H1" },
+      "snug":    { "value": 1.3,  "role": "H2, H3" },
+      "normal":  { "value": 1.6,  "role": "Body copy" },
+      "relaxed": { "value": 1.75, "role": "Long-form reading" },
+      "ja":       { "value": 1.8,  "role": "Japanese body copy", "comment": "Japanese sets without word spaces and with full-height glyphs, so Latin leading reads cramped. Size scale is shared; only leading changes." },
+      "ja-tight": { "value": 1.4,  "role": "Japanese headings" }
+    },
+
+    "letterSpacing": {
+      "tighter": { "value": "-0.02em", "role": "Display" },
+      "tight":   { "value": "-0.01em", "role": "Headings" },
+      "normal":  { "value": "0em",     "role": "Body" },
+      "wide":    { "value": "0.02em",  "role": "Small caps, labels" },
+      "widest":  { "value": "0.12em",  "role": "Eyebrow / badge text" }
+    }
+  },
+
+  "space": {
+    "$comment": "4px base grid. Named by step, not by use, so components stay composable.",
+    "0":  0,
+    "1":  4,
+    "2":  8,
+    "3":  12,
+    "4":  16,
+    "5":  20,
+    "6":  24,
+    "8":  32,
+    "10": 40,
+    "12": 48,
+    "16": 64,
+    "20": 80,
+    "24": 96,
+    "32": 128
+  },
+
+  "radius": {
+    "none": 0,
+    "sm":   4,
+    "md":   8,
+    "lg":   16,
+    "xl":   24,
+    "pill": 999,
+    "$comment": "pill is the house style for buttons and badges, carried over from existing Robo Co-op web work."
+  },
+
+  "border": {
+    "hairline": 1,
+    "thick":    2,
+    "heavy":    4
+  },
+
+  "motion": {
+    "duration": {
+      "instant": "0ms",
+      "fast":    "120ms",
+      "base":    "240ms",
+      "slow":    "400ms",
+      "glacial": "700ms"
+    },
+    "easing": {
+      "standard":  "cubic-bezier(0.16, 1, 0.3, 1)",
+      "accelerate":"cubic-bezier(0.4, 0, 1, 1)",
+      "decelerate":"cubic-bezier(0, 0, 0.2, 1)",
+      "linear":    "linear"
+    },
+    "$comment": "standard easing is inherited from the existing Robo Lab site so new work matches what already ships."
+  },
+
+  "elevation": {
+    "$comment": "Shadow colour is brand-dependent and resolved per theme via --rds-shadow-rgb.",
+    "0": "none",
+    "1": "0 1px 2px rgba(var(--rds-shadow-rgb) / 0.06), 0 1px 3px rgba(var(--rds-shadow-rgb) / 0.10)",
+    "2": "0 4px 6px rgba(var(--rds-shadow-rgb) / 0.05), 0 2px 4px rgba(var(--rds-shadow-rgb) / 0.06)",
+    "3": "0 10px 30px rgba(var(--rds-shadow-rgb) / 0.10)",
+    "4": "0 20px 40px rgba(var(--rds-shadow-rgb) / 0.15)"
+  },
+
+  "breakpoint": {
+    "sm": 480,
+    "md": 768,
+    "lg": 1024,
+    "xl": 1300,
+    "$comment": "xl matches the 1300px container already used on robo-lab web work."
+  },
+
+  "container": {
+    "narrow": 720,
+    "base":   1024,
+    "wide":   1300
+  },
+
+  "focus": {
+    "width":  3,
+    "offset": 2,
+    "$comment": "Ring colour comes from the brand's --rds-color-focus."
+  }
+}

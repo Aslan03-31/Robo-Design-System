@@ -1,0 +1,222 @@
+/* ==========================================================================
+   Base — reset, document defaults, typography
+   Everything resolves from tokens. No literal colours or sizes below.
+   ========================================================================== */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+* { margin: 0; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--rds-font-latin);
+  font-size: var(--rds-text-body);
+  font-weight: var(--rds-weight-regular);
+  line-height: var(--rds-leading-normal);
+  color: var(--rds-color-text);
+  background-color: var(--rds-color-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--rds-duration-base) var(--rds-ease-standard),
+              color var(--rds-duration-base) var(--rds-ease-standard);
+}
+
+/* Japanese copy switches face and loosens leading slightly. Guidelines p.14.
+   Do not mix the two faces mid-sentence.
+
+   The looser leading is not decoration: Japanese sets without word spaces and
+   with full-height glyphs, so Latin line-heights read as cramped. The size
+   scale is deliberately shared, so a bilingual page keeps one vertical rhythm.
+
+   `:lang(ja)` needs a real language declaration to fire — `<html lang="ja">`
+   for a Japanese page, or `<p lang="ja">` for a passage inside an English one.
+   Use `.rds-ja` where you cannot set the attribute. */
+:lang(ja),
+.rds-ja {
+  font-family: var(--rds-font-japanese);
+  line-height: var(--rds-leading-ja);
+}
+
+/* Japanese headings sit tighter than body, same as the Latin scale.
+   Both the self and descendant forms are needed: `<h2 lang="ja">` is the
+   element itself, `<div lang="ja"><h2>` is a descendant. A descendant
+   combinator alone silently misses the first, which is the common case. */
+:lang(ja):is(h1, h2, h3, .rds-display),
+:lang(ja) :is(h1, h2, h3, .rds-display),
+.rds-ja:is(h1, h2, h3, .rds-display),
+.rds-ja :is(h1, h2, h3, .rds-display) {
+  line-height: var(--rds-leading-ja-tight);
+}
+
+/* Japanese wraps between characters, so the Latin word-breaking defaults
+   inherited from `body` would produce awkward breaks. */
+:lang(ja):is(p, li, td),
+:lang(ja) :is(p, li, td),
+.rds-ja:is(p, li, td),
+.rds-ja :is(p, li, td) {
+  line-break: strict;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+img, svg, video, canvas { display: block; max-width: 100%; }
+svg { height: auto; }
+
+input, button, textarea, select { font: inherit; color: inherit; }
+
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+
+/* --------------------------------------------------------------- headings */
+
+/* The eight named styles from the guidelines' typesetting hierarchy. Each is
+   a complete type style — size, weight and leading together — so callers adopt
+   one rather than reassembling it and drifting. */
+
+.rds-title {
+  font-size: var(--rds-text-title);
+  font-weight: var(--rds-text-title-weight);
+  line-height: var(--rds-leading-tight);
+  letter-spacing: var(--rds-tracking-tighter);
+}
+
+h1, .rds-heading {
+  font-size: var(--rds-text-heading);
+  font-weight: var(--rds-text-heading-weight);
+  line-height: var(--rds-leading-tight);
+  letter-spacing: var(--rds-tracking-tight);
+}
+
+h2, .rds-subtitle {
+  font-size: var(--rds-text-subtitle);
+  font-weight: var(--rds-text-subtitle-weight);
+  line-height: var(--rds-leading-snug);
+  letter-spacing: var(--rds-tracking-tight);
+}
+
+h3, .rds-section-header {
+  font-size: var(--rds-text-section-header);
+  font-weight: var(--rds-text-section-header-weight);
+  line-height: var(--rds-leading-snug);
+}
+
+h4, .rds-subheading {
+  font-size: var(--rds-text-subheading);
+  font-weight: var(--rds-text-subheading-weight);
+  line-height: var(--rds-leading-snug);
+}
+
+.rds-quote {
+  font-size: var(--rds-text-quote);
+  font-weight: var(--rds-text-quote-weight);
+  font-style: italic;
+  line-height: var(--rds-leading-relaxed);
+}
+
+small, .rds-caption {
+  font-size: var(--rds-text-caption);
+  font-weight: var(--rds-text-caption-weight);
+  color: var(--rds-color-text-muted);
+}
+
+.rds-caption--xs { font-size: var(--rds-text-caption-sm); }
+
+/* Kept so existing markup keeps working; they resolve to the styles above. */
+.rds-display { font-size: var(--rds-text-title); font-weight: var(--rds-text-title-weight); line-height: var(--rds-leading-tight); letter-spacing: var(--rds-tracking-tighter); }
+.rds-h1 { font-size: var(--rds-text-heading); font-weight: var(--rds-text-heading-weight); line-height: var(--rds-leading-tight); }
+.rds-h2 { font-size: var(--rds-text-subtitle); font-weight: var(--rds-text-subtitle-weight); line-height: var(--rds-leading-snug); }
+.rds-h3 { font-size: var(--rds-text-section-header); font-weight: var(--rds-text-section-header-weight); line-height: var(--rds-leading-snug); }
+
+.rds-subhead {
+  font-size: var(--rds-text-body-lg);
+  font-weight: var(--rds-weight-medium);
+  color: var(--rds-color-text-muted);
+}
+
+.rds-lead {
+  font-size: var(--rds-text-body-lg);
+  line-height: var(--rds-leading-relaxed);
+  color: var(--rds-color-text-muted);
+}
+
+/* Pull quote, as set in the guidelines. */
+blockquote.rds-blockquote {
+  font-size: var(--rds-text-quote);
+  font-style: italic;
+  line-height: var(--rds-leading-relaxed);
+  padding: var(--rds-space-5) var(--rds-space-6);
+  border-left: var(--rds-border-heavy) solid var(--rds-color-primary);
+  background: var(--rds-color-primary-subtle);
+  border-radius: 0 var(--rds-radius-md) var(--rds-radius-md) 0;
+}
+
+/* Eyebrow / kicker above a heading. */
+.rds-eyebrow {
+  font-size: var(--rds-text-caption);
+  font-weight: var(--rds-weight-medium);
+  letter-spacing: var(--rds-tracking-widest);
+  text-transform: uppercase;
+  color: var(--rds-color-primary-text);
+}
+
+code, kbd, samp, pre { font-family: var(--rds-font-mono); font-size: 0.9em; }
+
+/* ------------------------------------------------------------------ links */
+
+a {
+  color: var(--rds-color-primary-text);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+  transition: color var(--rds-duration-fast) var(--rds-ease-standard);
+}
+
+a:hover { color: var(--rds-color-primary-hover); }
+
+/* ------------------------------------------------------------------ focus */
+
+:focus { outline: none; }
+
+:focus-visible {
+  outline: var(--rds-focus-width) solid var(--rds-color-focus);
+  outline-offset: var(--rds-focus-offset);
+  border-radius: var(--rds-radius-sm);
+}
+
+::selection {
+  background: var(--rds-color-primary);
+  color: var(--rds-color-on-primary);
+}
+
+hr {
+  border: none;
+  border-top: var(--rds-border-hairline) solid var(--rds-color-border);
+  margin-block: var(--rds-space-8);
+}
+
+/* --------------------------------------------------------------- layout   */
+
+.rds-container {
+  width: 100%;
+  max-width: var(--rds-container-wide);
+  margin-inline: auto;
+  padding-inline: var(--rds-space-6);
+}
+
+.rds-container--base   { max-width: var(--rds-container-base); }
+.rds-container--narrow { max-width: var(--rds-container-narrow); }
+
+/* Screen-reader-only, but still focusable. */
+.rds-visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
