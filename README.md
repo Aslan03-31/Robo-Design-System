@@ -2,7 +2,9 @@
 
 Design tokens, logo assets and a framework-free CSS layer for the four Robo Co-op brands.
 
-Built from **Brand Guidelines UPDATE.pdf** and the master logo artwork. Every colour, type
+**Built and created by the Robo Co-op Marketing Team** — aslan.alayoubi@roboco-op.org
+
+Derived from **Brand Guidelines UPDATE.pdf** and the master logo artwork. Every colour, type
 size and rule in here traces back to that document — and where the document contradicted
 itself, the deviation is recorded rather than silently resolved.
 
@@ -280,25 +282,16 @@ automatically. There is no registry to update.
 
 ---
 
-## Publishing to GitHub
+## Repository
 
-Not yet pushed — this repository is local only. It is initialised on `main` with one
-commit. The intended remote name is **`robo-coop-design-system`**, and it must be
-**private**: the logo artwork and brand colours are proprietary (see [LICENSE](LICENSE)).
+**https://github.com/Aslan03-31/Robo-Design-System** — private, and it must stay that way:
+the logo artwork and brand colours are proprietary (see [LICENSE](LICENSE)).
 
-With the GitHub CLI (`winget install --id GitHub.cli`, then `gh auth login`):
-
-```bash
-gh repo create robo-coop-design-system --private --source=. --push
-```
-
-Or against a repo you created by hand — make it empty, with no README, `.gitignore` or
-licence, since this tree already has all three:
-
-```bash
-git remote add origin https://github.com/<you>/robo-coop-design-system.git
-git push -u origin main
-```
+The working checkout lives at
+`C:\Users\aslan\Documents\GitHub\robo-design-system\Robo-Design-System`.
+`npm run assets` additionally reads the Illustrator masters from
+`C:/Users/aslan/Desktop/Robo/LOGO`, which deliberately sit outside the repo — a clone
+without them still builds, it just cannot re-import logo artwork.
 
 ## Licence
 
@@ -307,3 +300,6 @@ git push -u origin main
 The logos, wordmarks and brand colours are Robo Co-op trade marks and are not open source.
 This repository is private and its contents are not licensed for redistribution or for use
 by third parties without written permission.
+
+Built and created by the **Robo Co-op Marketing Team**. Requests to use, licence or
+reproduce any part of this system should go to **aslan.alayoubi@roboco-op.org**.
